@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <url>
+    <loc>https://smitsenwouters.com/</loc>
+    <lastmod>2026-03-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://smitsenwouters.com/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://smitsenwouters.com/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://smitsenwouters.com/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://smitsenwouters.com/"/>
+  </url>
+
+  <url>
+    <loc>https://smitsenwouters.com/services.html</loc>
+    <lastmod>2026-03-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://smitsenwouters.com/services.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://smitsenwouters.com/services.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://smitsenwouters.com/services.html"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://smitsenwouters.com/services.html"/>
+  </url>
+
+  <url>
+    <loc>https://smitsenwouters.com/projects.html</loc>
+    <lastmod>2026-03-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://smitsenwouters.com/projects.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://smitsenwouters.com/projects.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://smitsenwouters.com/projects.html"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://smitsenwouters.com/projects.html"/>
+  </url>
+
+  <url>
+    <loc>https://smitsenwouters.com/about.html</loc>
+    <lastmod>2026-03-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://smitsenwouters.com/about.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://smitsenwouters.com/about.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://smitsenwouters.com/about.html"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://smitsenwouters.com/about.html"/>
+  </url>
+
+  <url>
+    <loc>https://smitsenwouters.com/contact.html</loc>
+    <lastmod>2026-03-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://smitsenwouters.com/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://smitsenwouters.com/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://smitsenwouters.com/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://smitsenwouters.com/contact.html"/>
+  </url>
+
+</urlset>
