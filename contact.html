@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en" data-page="contact">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Smits & Wouters</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Playfair+Display+SC:wght@400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: { 950:'#0A1628', 900:'#0F1E40', 800:'#162966', 700:'#1E3A8A', 600:'#2D5FC4', 500:'#4070D8', 400:'#5A8AE8', 300:'#8FBAF5', 200:'#C0D8F5', 100:'#E4EEF9', 50:'#F0F6FC' },
+          },
+          fontFamily: {
+            display: ['Playfair Display','Georgia','serif'],
+            'display-sc': ['Playfair Display SC','Georgia','serif'],
+            body: ['Inter','system-ui','sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+  <style>
+    body { font-family:'Inter',system-ui,sans-serif; color:#0F1E40; }
+    h1,h2,h3 { font-family:'Playfair Display',Georgia,serif; }
+    .font-display-sc { font-family:'Playfair Display SC',Georgia,serif; }
+    .shadow-brand { box-shadow:0 1px 2px rgba(22,41,102,.06),0 4px 12px rgba(22,41,102,.12),0 16px 32px rgba(22,41,102,.09); }
+    .sw-lang-active { color:#8FBAF5 !important; font-weight:600; border-bottom:2px solid #8FBAF5; }
+    nav a.nav-active { color:#8FBAF5; border-bottom:2px solid #8FBAF5; }
+    .grain { background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E"); }
+    .btn { transition:transform .2s ease,opacity .2s ease; }
+    .btn:hover { transform:translateY(-1px); opacity:.92; }
+    .btn:active { transform:translateY(0); opacity:.85; }
+    #site-header.scrolled { background-color:rgba(10,22,40,.97);backdrop-filter:blur(12px);box-shadow:0 1px 0 rgba(90,138,232,.15); }
+    .nav-link { transition:color .2s ease; }
+    .nav-link:hover { color:white; }
+
+    .form-field {
+      width:100%; background:#F0F6FC; border:1px solid #C0D8F5;
+      padding:.75rem 1rem; font-family:'Inter',system-ui,sans-serif;
+      font-size:.875rem; color:#0F1E40; outline:none;
+      transition:border-color .2s ease, box-shadow .2s ease;
+    }
+    .form-field:focus { border-color:#162966; box-shadow:0 0 0 3px rgba(22,41,102,0.08); }
+    .form-field.error { border-color:#C0392B; }
+    .form-label {
+      display:block; font-family:'Playfair Display SC',Georgia,serif;
+      font-size:.68rem; letter-spacing:.12em; color:#4A6688; margin-bottom:.5rem;
+    }
+    html { scroll-behavior:smooth; }
+    @keyframes fadeUp { from{opacity:0;transform:translateY(28px)} to{opacity:1;transform:translateY(0)} }
+    @keyframes fadeIn { from{opacity:0} to{opacity:1} }
+    @keyframes kenBurns { from{transform:scale(1)} to{transform:scale(1.07)} }
+    .hero-eyebrow { animation:fadeUp .8s cubic-bezier(.22,1,.36,1) both; animation-delay:.25s; }
+    .ken-burns { animation:kenBurns 14s ease-out both; }
+    .reveal       { opacity:0; transform:translateY(32px); transition:opacity .7s cubic-bezier(.22,1,.36,1),transform .7s cubic-bezier(.22,1,.36,1); }
+    .reveal-left  { opacity:0; transform:translateX(-32px); transition:opacity .7s cubic-bezier(.22,1,.36,1),transform .7s cubic-bezier(.22,1,.36,1); }
+    .reveal-right { opacity:0; transform:translateX(32px); transition:opacity .7s cubic-bezier(.22,1,.36,1),transform .7s cubic-bezier(.22,1,.36,1); }
+    .reveal-scale { opacity:0; transform:scale(.96); transition:opacity .7s cubic-bezier(.22,1,.36,1),transform .7s cubic-bezier(.22,1,.36,1); }
+    .is-visible   { opacity:1 !important; transform:none !important; }
+  </style>
+</head>
+<body class="antialiased" style="background:#F0F6FC;">
+
+  <header id="site-header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300" style="background-color:rgba(10,22,40,0.82);backdrop-filter:blur(10px);">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <a href="index.html" class="btn"><img src="brand_asset/image001.png" alt="Smits & Wouters" class="h-12 w-auto" style="background:white;padding:3px 8px;border-radius:4px;" /></a>
+        <nav class="hidden md:flex items-center gap-8">
+          <a href="index.html" class="nav-link font-body text-sm font-medium text-white/60 pb-0.5" style="letter-spacing:.04em;"><span data-i18n="nav.home">Home</span></a>
+          <a href="services.html" class="nav-link font-body text-sm font-medium text-white/60 pb-0.5" style="letter-spacing:.04em;"><span data-i18n="nav.services">Services</span></a>
+          <a href="projects.html" class="nav-link font-body text-sm font-medium text-white/60 pb-0.5" style="letter-spacing:.04em;"><span data-i18n="nav.projects">Projects</span></a>
+          <a href="about.html" class="nav-link font-body text-sm font-medium text-white/60 pb-0.5" style="letter-spacing:.04em;"><span data-i18n="nav.about">About</span></a>
+          <a href="contact.html" class="nav-active nav-link font-body text-sm font-medium text-white/90 pb-0.5" style="letter-spacing:.04em;"><span data-i18n="nav.contact">Contact</span></a>
+        </nav>
+        <div class="flex items-center gap-4">
+          <div class="hidden md:flex items-center gap-1 pl-4" style="border-left:1px solid rgba(255,255,255,.15);">
+            <button data-lang="en" class="font-body text-xs font-medium text-white/50 px-1.5 py-1 btn" style="letter-spacing:.09em;">EN</button><span class="text-white/15 text-xs">|</span>
+            <button data-lang="nl" class="font-body text-xs font-medium text-white/50 px-1.5 py-1 btn" style="letter-spacing:.09em;">NL</button><span class="text-white/15 text-xs">|</span>
+            <button data-lang="es" class="font-body text-xs font-medium text-white/50 px-1.5 py-1 btn" style="letter-spacing:.09em;">ES</button><span class="text-white/15 text-xs">|</span>
+            <button data-lang="tr" class="font-body text-xs font-medium text-white/50 px-1.5 py-1 btn" style="letter-spacing:.09em;">TR</button>
+          </div>
+          <button id="hamburger" class="md:hidden flex flex-col gap-1.5 p-2 btn" aria-label="Open menu"><span class="block w-6 h-px bg-white"></span><span class="block w-6 h-px bg-white"></span><span class="block w-6 h-px bg-white"></span></button>
+        </div>
+      </div>
+    </div>
+    <div id="mobile-menu" class="hidden fixed inset-0 top-20 z-40 flex flex-col p-8 gap-6 md:hidden" style="background:#0A1628;">
+      <a href="index.html" class="font-display text-2xl text-white/70 border-b pb-4" style="border-color:rgba(255,255,255,.08);"><span data-i18n="nav.home">Home</span></a>
+      <a href="services.html" class="font-display text-2xl text-white/70 border-b pb-4" style="border-color:rgba(255,255,255,.08);"><span data-i18n="nav.services">Services</span></a>
+      <a href="projects.html" class="font-display text-2xl text-white/70 border-b pb-4" style="border-color:rgba(255,255,255,.08);"><span data-i18n="nav.projects">Projects</span></a>
+      <a href="about.html" class="font-display text-2xl text-white/70 border-b pb-4" style="border-color:rgba(255,255,255,.08);"><span data-i18n="nav.about">About</span></a>
+      <a href="contact.html" class="font-display text-2xl text-white border-b pb-4" style="border-color:rgba(255,255,255,.08);"><span data-i18n="nav.contact">Contact</span></a>
+      <div class="flex items-center gap-3 pt-2">
+        <button data-lang="en" class="font-body text-sm font-medium text-white/60 px-3 py-1.5 btn" style="border:1px solid rgba(255,255,255,.15);letter-spacing:.09em;">EN</button>
+        <button data-lang="nl" class="font-body text-sm font-medium text-white/60 px-3 py-1.5 btn" style="border:1px solid rgba(255,255,255,.15);letter-spacing:.09em;">NL</button>
+        <button data-lang="es" class="font-body text-sm font-medium text-white/60 px-3 py-1.5 btn" style="border:1px solid rgba(255,255,255,.15);letter-spacing:.09em;">ES</button>
+        <button data-lang="tr" class="font-body text-sm font-medium text-white/60 px-3 py-1.5 btn" style="border:1px solid rgba(255,255,255,.15);letter-spacing:.09em;">TR</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO with interior photo -->
+  <section class="relative flex items-end overflow-hidden" style="min-height:50vh;">
+    <div class="absolute inset-0">
+      <img src="brand_asset/kempinski-residences-the-creek-dubai-10-Copy-1676774748.jpg" alt="" aria-hidden="true" class="ken-burns parallax-bg w-full h-full object-cover object-center" style="transform-origin:center center;" />
+      <div class="absolute inset-0" style="background:linear-gradient(105deg, rgba(10,22,40,0.94) 0%, rgba(10,22,40,0.75) 55%, rgba(10,22,40,0.50) 100%);"></div>
+      <div class="absolute inset-0" style="background:rgba(22,41,102,0.20);mix-blend-mode:multiply;"></div>
+    </div>
+    <div class="absolute inset-0 grain pointer-events-none" style="opacity:.4;"></div>
+    <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 pb-16 pt-36">
+      <p class="font-display-sc text-xs mb-4" style="color:#8FBAF5;letter-spacing:.16em;" data-i18n="contact.hero.eyebrow">Reach Out</p>
+      <h1 class="font-display text-white font-bold mb-4" style="font-size:clamp(2.4rem,5vw,4rem);line-height:1.06;letter-spacing:-0.03em;" data-i18n="contact.hero.headline">Contact Us</h1>
+      <div style="width:40px;height:1px;background:#5A8AE8;margin-bottom:1rem;"></div>
+      <p class="font-body text-lg" style="max-width:440px;line-height:1.68;color:rgba(255,255,255,.52);" data-i18n="contact.hero.subline">We welcome a confidential first conversation.</p>
+    </div>
+  </section>
+
+  <!-- CONTACT CONTENT -->
+  <section class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-5 gap-16">
+
+        <!-- LEFT: Info -->
+        <div class="reveal-left lg:col-span-2">
+          <div class="mb-10 pb-10" style="border-bottom:1px solid #E4EEF9;">
+            <img src="brand_asset/image001.png" alt="Smits & Wouters" class="h-20 w-auto" />
+          </div>
+
+          <div class="mb-8">
+            <p class="form-label mb-3" data-i18n="contact.info.address.label">Address</p>
+            <address class="not-italic font-body text-sm" style="line-height:1.85;color:#4A6688;">
+              Pastoriestraat 1<br />6921BV Duiven<br />The Netherlands
+            </address>
+          </div>
+
+          <div class="mb-8">
+            <p class="form-label mb-3" data-i18n="contact.info.phone.label">Phone</p>
+            <a href="tel:+31650698090" class="font-body font-medium text-sm btn" style="color:#162966;transition:color .2s ease;" onmouseover="this.style.color='#2D5FC4'" onmouseout="this.style.color='#162966'">+31(0)6 50698090</a>
+          </div>
+
+          <div class="mb-10">
+            <p class="form-label mb-3" data-i18n="contact.info.hours.label">Office Hours</p>
+            <p class="font-body text-sm" style="line-height:1.72;color:#4A6688;" data-i18n="contact.info.hours.value">Monday – Friday, 9:00 – 17:30</p>
+          </div>
+
+          <div style="width:40px;height:2px;background:#5A8AE8;margin-bottom:1.5rem;"></div>
+          <p class="font-body text-xs" style="line-height:1.72;max-width:260px;color:#8FBAF5;">All enquiries are treated with complete discretion and confidentiality.</p>
+        </div>
+
+        <!-- RIGHT: Form -->
+        <div class="reveal-right lg:col-span-3">
+          <div class="bg-brand-50 p-10 shadow-brand">
+            <!-- Success banner -->
+            <div id="form-success" class="hidden mb-8 p-4 flex items-center gap-3" style="background:#EBF5EF;border-left:3px solid #2E7D32;">
+              <svg class="w-5 h-5 flex-shrink-0" style="color:#2E7D32;" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              <p class="font-body text-sm" style="color:#1B5E20;" data-i18n="contact.form.success">Thank you — we'll be in touch shortly.</p>
+            </div>
+
+            <form id="contact-form" novalidate>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mb-5">
+                <div>
+                  <label class="form-label" for="name" data-i18n="contact.form.name.label">Full Name</label>
+                  <input type="text" id="name" name="name" class="form-field" data-i18n-placeholder="contact.form.name.placeholder" placeholder="Your full name" required />
+                </div>
+                <div>
+                  <label class="form-label" for="email" data-i18n="contact.form.email.label">Email Address</label>
+                  <input type="email" id="email" name="email" class="form-field" data-i18n-placeholder="contact.form.email.placeholder" placeholder="your@email.com" required />
+                </div>
+              </div>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mb-5">
+                <div>
+                  <label class="form-label" for="phone" data-i18n="contact.form.phone.label">Phone (optional)</label>
+                  <input type="tel" id="phone" name="phone" class="form-field" data-i18n-placeholder="contact.form.phone.placeholder" placeholder="+31 ..." />
+                </div>
+                <div>
+                  <label class="form-label" for="subject" data-i18n="contact.form.subject.label">Subject</label>
+                  <select id="subject" name="subject" class="form-field" style="appearance:none;background-image:url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%234A6688' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E\");background-repeat:no-repeat;background-position:right 1rem center;padding-right:2.5rem;cursor:pointer;">
+                    <option value="" data-i18n-opt="contact.form.subject.opt1">General Enquiry</option>
+                    <option value="development" data-i18n-opt="contact.form.subject.opt2">Real Estate Development</option>
+                    <option value="land" data-i18n-opt="contact.form.subject.opt3">Land Positions</option>
+                    <option value="consultancy" data-i18n-opt="contact.form.subject.opt4">Consultancy</option>
+                    <option value="buying-selling" data-i18n-opt="contact.form.subject.opt5">Buying / Selling</option>
+                  </select>
+                </div>
+              </div>
+              <div class="mb-8">
+                <label class="form-label" for="message" data-i18n="contact.form.message.label">Message</label>
+                <textarea id="message" name="message" rows="6" class="form-field resize-none" data-i18n-placeholder="contact.form.message.placeholder" placeholder="How can we help you?" required></textarea>
+              </div>
+              <button type="submit" class="btn inline-flex items-center gap-2 px-10 py-4 font-body text-sm font-semibold text-white" style="background:#162966;letter-spacing:.06em;border:none;cursor:pointer;">
+                <span data-i18n="contact.form.submit">Send Message</span>
+                <svg width="15" height="15" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer style="background:#0A1628;" class="pt-16 pb-8">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12 pb-12" style="border-bottom:1px solid rgba(255,255,255,.06);">
+        <div>
+          <img src="brand_asset/image001.png" alt="Smits & Wouters" class="h-16 w-auto mb-4" style="background:white;padding:4px 10px;border-radius:4px;" />
+          <p class="font-body text-sm" style="line-height:1.65;color:rgba(255,255,255,.35);" data-i18n="footer.tagline">International commercial real estate — discreet, expert, results-driven.</p>
+        </div>
+        <div>
+          <p class="font-display-sc text-xs mb-4" style="color:#5A8AE8;letter-spacing:.14em;">Navigation</p>
+          <nav class="flex flex-col gap-2.5">
+            <a href="index.html" class="font-body text-sm" style="color:rgba(255,255,255,.45);transition:color .2s ease;" onmouseover="this.style.color='rgba(255,255,255,.85)'" onmouseout="this.style.color='rgba(255,255,255,.45)'" data-i18n="nav.home">Home</a>
+            <a href="services.html" class="font-body text-sm" style="color:rgba(255,255,255,.45);transition:color .2s ease;" onmouseover="this.style.color='rgba(255,255,255,.85)'" onmouseout="this.style.color='rgba(255,255,255,.45)'" data-i18n="nav.services">Services</a>
+            <a href="projects.html" class="font-body text-sm" style="color:rgba(255,255,255,.45);transition:color .2s ease;" onmouseover="this.style.color='rgba(255,255,255,.85)'" onmouseout="this.style.color='rgba(255,255,255,.45)'" data-i18n="nav.projects">Projects</a>
+            <a href="about.html" class="font-body text-sm" style="color:rgba(255,255,255,.45);transition:color .2s ease;" onmouseover="this.style.color='rgba(255,255,255,.85)'" onmouseout="this.style.color='rgba(255,255,255,.45)'" data-i18n="nav.about">About</a>
+            <a href="contact.html" class="font-body text-sm" style="color:rgba(255,255,255,.45);transition:color .2s ease;" onmouseover="this.style.color='rgba(255,255,255,.85)'" onmouseout="this.style.color='rgba(255,255,255,.45)'" data-i18n="nav.contact">Contact</a>
+          </nav>
+        </div>
+        <div>
+          <p class="font-display-sc text-xs mb-4" style="color:#5A8AE8;letter-spacing:.14em;" data-i18n="footer.established">Established 1989</p>
+          <address class="not-italic">
+            <p class="font-body text-sm mb-1.5" style="color:rgba(255,255,255,.45);" data-i18n="footer.address">Pastoriestraat 1, 6921BV Duiven, The Netherlands</p>
+            <a href="tel:+31650698090" class="font-body text-sm" style="color:rgba(255,255,255,.45);transition:color .2s ease;" onmouseover="this.style.color='#8FBAF5'" onmouseout="this.style.color='rgba(255,255,255,.45)'" data-i18n="footer.phone">+31(0)6 50698090</a>
+          </address>
+        </div>
+      </div>
+      <div class="flex flex-col md:flex-row justify-between items-center gap-3">
+        <p class="font-body text-xs" style="color:rgba(255,255,255,.2);letter-spacing:.04em;" data-i18n="footer.copyright">© 1989–2026 Smits & Wouters. All rights reserved.</p>
+        <p class="font-body text-xs" style="color:rgba(255,255,255,.15);">smitsenwouters.com</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/i18n.js"></script>
+  <script>
+    const header = document.getElementById('site-header');
+    window.addEventListener('scroll', () => { header.classList.toggle('scrolled', window.scrollY > 40); }, { passive:true });
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobile-menu');
+    let menuOpen = false;
+    hamburger.addEventListener('click', () => { menuOpen = !menuOpen; mobileMenu.classList.toggle('hidden', !menuOpen); });
+
+    const form = document.getElementById('contact-form');
+    const successBanner = document.getElementById('form-success');
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      let valid = true;
+      ['name','email','message'].forEach(id => {
+        const f = document.getElementById(id);
+        f.classList.remove('error');
+        if (!f.value.trim()) { f.classList.add('error'); valid = false; }
+      });
+      const emailField = document.getElementById('email');
+      if (emailField.value && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailField.value)) {
+        emailField.classList.add('error'); valid = false;
+      }
+      if (valid) {
+        form.style.display = 'none';
+        successBanner.classList.remove('hidden');
+        successBanner.style.display = 'flex';
+      }
+    });
+    form.querySelectorAll('.form-field').forEach(f => f.addEventListener('input', () => f.classList.remove('error')));
+  </script>
+  <script src="js/animations.js"></script>
+</body>
+</html>

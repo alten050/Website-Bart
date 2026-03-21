@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en" data-page="projects">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects — Smits & Wouters</title>
+  <meta name="description" content="Selected projects from Smits & Wouters — 37 years of European commercial real estate transactions." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Playfair+Display+SC:wght@400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: { 950:'#0A1628', 900:'#0F1E40', 800:'#162966', 700:'#1E3A8A', 600:'#2D5FC4', 500:'#4070D8', 400:'#5A8AE8', 300:'#8FBAF5', 200:'#C0D8F5', 100:'#E4EEF9', 50:'#F0F6FC' },
+          },
+          fontFamily: {
+            display: ['Playfair Display','Georgia','serif'],
+            'display-sc': ['Playfair Display SC','Georgia','serif'],
+            body: ['Inter','system-ui','sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+  <style>
+    body { font-family:'Inter',system-ui,sans-serif; color:#0F1E40; }
+    h1,h2,h3,.font-display { font-family:'Playfair Display',Georgia,serif; }
+    .font-display-sc { font-family:'Playfair Display SC',Georgia,serif; }
+    .shadow-brand { box-shadow:0 1px 2px rgba(22,41,102,.06),0 4px 12px rgba(22,41,102,.12),0 16px 32px rgba(22,41,102,.09); }
+    .sw-lang-active { color:#8FBAF5 !important; font-weight:600; border-bottom:2px solid #8FBAF5; }
+    nav a.nav-active { color:#8FBAF5; border-bottom:2px solid #8FBAF5; }
+    .grain { background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E"); }
+    .btn { transition:transform .2s ease,opacity .2s ease; }
+    .btn:hover { transform:translateY(-1px); opacity:.92; }
+    .btn:active { transform:translateY(0); opacity:.85; }
+    #site-header.scrolled { background-color:rgba(10,22,40,.97);backdrop-filter:blur(12px);box-shadow:0 1px 0 rgba(90,138,232,.15); }
+    .nav-link { transition:color .2s ease; }
+    .nav-link:hover { color:white; }
+
+    .filter-tab { transition:color .2s ease,border-color .2s ease; cursor:pointer; }
+    .filter-tab.active { color:#162966; border-color:#162966; font-weight:600; }
+    .filter-tab:focus-visible { outline:2px solid #5A8AE8; outline-offset:2px; }
+
+    .project-card { transition:transform .25s cubic-bezier(.4,0,.2,1),box-shadow .25s ease; overflow:hidden; }
+    .project-card:hover { transform:translateY(-6px); box-shadow:0 8px 32px rgba(22,41,102,.18),0 2px 4px rgba(22,41,102,.08); }
+    .project-card:hover .card-overlay { opacity:1; }
+    .card-overlay { transition:opacity .3s ease; }
+    html { scroll-behavior:smooth; }
+    @keyframes fadeUp { from{opacity:0;transform:translateY(28px)} to{opacity:1;transform:translateY(0)} }
+    @keyframes fadeIn { from{opacity:0} to{opacity:1} }
+    @keyframes kenBurns { from{transform:scale(1)} to{transform:scale(1.07)} }
+    .hero-eyebrow { animation:fadeUp .8s cubic-bezier(.22,1,.36,1) both; animation-delay:.25s; }
+    .ken-burns { animation:kenBurns 14s ease-out both; }
+    .reveal       { opacity:0; transform:translateY(32px); transition:opacity .7s cubic-bezier(.22,1,.36,1),transform .7s cubic-bezier(.22,1,.36,1); }
+    .reveal-scale { opacity:0; transform:scale(.96); transition:opacity .7s cubic-bezier(.22,1,.36,1),transform .7s cubic-bezier(.22,1,.36,1); }
+    .is-visible   { opacity:1 !important; transform:none !important; }
+  </style>
+</head>
+<body class="antialiased" style="background:#F0F6FC;">
+
+  <!-- HEADER -->
+  <header id="site-header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300" style="background-color:rgba(10,22,40,0.82);backdrop-filter:blur(10px);">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <a href="index.html" class="btn"><img src="brand_asset/image001.png" alt="Smits & Wouters" class="h-12 w-auto" style="background:white;padding:3px 8px;border-radius:4px;" /></a>
+        <nav class="hidden md:flex items-center gap-8">
+          <a href="index.html" class="nav-link font-body text-sm font-medium text-white/60 pb-0.5" style="letter-spacing:.04em;"><span data-i18n="nav.home">Home</span></a>
+          <a href="services.html" class="nav-link font-body text-sm font-medium text-white/60 pb-0.5" style="letter-spacing:.04em;"><span data-i18n="nav.services">Services</span></a>
+          <a href="projects.html" class="nav-active nav-link font-body text-sm font-medium text-white/90 pb-0.5" style="letter-spacing:.04em;"><span data-i18n="nav.projects">Projects</span></a>
+          <a href="about.html" class="nav-link font-body text-sm font-medium text-white/60 pb-0.5" style="letter-spacing:.04em;"><span data-i18n="nav.about">About</span></a>
+          <a href="contact.html" class="nav-link font-body text-sm font-medium text-white/60 pb-0.5" style="letter-spacing:.04em;"><span data-i18n="nav.contact">Contact</span></a>
+        </nav>
+        <div class="flex items-center gap-4">
+          <div class="hidden md:flex items-center gap-1 pl-4" style="border-left:1px solid rgba(255,255,255,.15);">
+            <button data-lang="en" class="font-body text-xs font-medium text-white/50 px-1.5 py-1 btn" style="letter-spacing:.09em;">EN</button><span class="text-white/15 text-xs">|</span>
+            <button data-lang="nl" class="font-body text-xs font-medium text-white/50 px-1.5 py-1 btn" style="letter-spacing:.09em;">NL</button><span class="text-white/15 text-xs">|</span>
+            <button data-lang="es" class="font-body text-xs font-medium text-white/50 px-1.5 py-1 btn" style="letter-spacing:.09em;">ES</button><span class="text-white/15 text-xs">|</span>
+            <button data-lang="tr" class="font-body text-xs font-medium text-white/50 px-1.5 py-1 btn" style="letter-spacing:.09em;">TR</button>
+          </div>
+          <button id="hamburger" class="md:hidden flex flex-col gap-1.5 p-2 btn" aria-label="Open menu"><span class="block w-6 h-px bg-white"></span><span class="block w-6 h-px bg-white"></span><span class="block w-6 h-px bg-white"></span></button>
+        </div>
+      </div>
+    </div>
+    <div id="mobile-menu" class="hidden fixed inset-0 top-20 z-40 flex flex-col p-8 gap-6 md:hidden" style="background:#0A1628;">
+      <a href="index.html" class="font-display text-2xl text-white/70 border-b pb-4" style="border-color:rgba(255,255,255,.08);"><span data-i18n="nav.home">Home</span></a>
+      <a href="services.html" class="font-display text-2xl text-white/70 border-b pb-4" style="border-color:rgba(255,255,255,.08);"><span data-i18n="nav.services">Services</span></a>
+      <a href="projects.html" class="font-display text-2xl text-white border-b pb-4" style="border-color:rgba(255,255,255,.08);"><span data-i18n="nav.projects">Projects</span></a>
+      <a href="about.html" class="font-display text-2xl text-white/70 border-b pb-4" style="border-color:rgba(255,255,255,.08);"><span data-i18n="nav.about">About</span></a>
+      <a href="contact.html" class="font-display text-2xl text-white/70 border-b pb-4" style="border-color:rgba(255,255,255,.08);"><span data-i18n="nav.contact">Contact</span></a>
+      <div class="flex items-center gap-3 pt-2">
+        <button data-lang="en" class="font-body text-sm font-medium text-white/60 px-3 py-1.5 btn" style="border:1px solid rgba(255,255,255,.15);letter-spacing:.09em;">EN</button>
+        <button data-lang="nl" class="font-body text-sm font-medium text-white/60 px-3 py-1.5 btn" style="border:1px solid rgba(255,255,255,.15);letter-spacing:.09em;">NL</button>
+        <button data-lang="es" class="font-body text-sm font-medium text-white/60 px-3 py-1.5 btn" style="border:1px solid rgba(255,255,255,.15);letter-spacing:.09em;">ES</button>
+        <button data-lang="tr" class="font-body text-sm font-medium text-white/60 px-3 py-1.5 btn" style="border:1px solid rgba(255,255,255,.15);letter-spacing:.09em;">TR</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO with photo -->
+  <section class="relative flex items-end overflow-hidden" style="min-height:55vh;">
+    <div class="absolute inset-0">
+      <img src="brand_asset/68d01d61ffd3b4b45366c345_unnamed+2-755626930.png" alt="" aria-hidden="true" class="ken-burns parallax-bg w-full h-full object-cover object-center" style="transform-origin:center center;" />
+      <div class="absolute inset-0" style="background:linear-gradient(105deg, rgba(10,22,40,0.92) 0%, rgba(10,22,40,0.68) 55%, rgba(10,22,40,0.40) 100%);"></div>
+      <div class="absolute inset-0" style="background:rgba(22,41,102,0.18);mix-blend-mode:multiply;"></div>
+    </div>
+    <div class="absolute inset-0 grain pointer-events-none" style="opacity:.4;"></div>
+    <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 pb-16 pt-36">
+      <p class="font-display-sc text-xs mb-4" style="color:#8FBAF5;letter-spacing:.16em;" data-i18n="projects.hero.eyebrow">Portfolio</p>
+      <h1 class="font-display text-white font-bold mb-4" style="font-size:clamp(2.4rem,5vw,4rem);line-height:1.06;letter-spacing:-0.03em;" data-i18n="projects.hero.headline">Selected Projects</h1>
+      <div style="width:40px;height:1px;background:#5A8AE8;margin-bottom:1rem;"></div>
+      <p class="font-body text-lg" style="max-width:540px;line-height:1.68;color:rgba(255,255,255,.52);" data-i18n="projects.hero.subline">A curated selection from our 37-year portfolio of European commercial real estate transactions.</p>
+    </div>
+  </section>
+
+  <!-- FILTER + GRID -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+
+      <!-- Filter tabs -->
+      <div class="flex flex-wrap gap-2 mb-12" id="filter-bar">
+        <button class="filter-tab active font-body text-sm px-5 py-2.5 border" style="color:#162966;border-color:#162966;font-weight:600;" data-filter="all"><span data-i18n="projects.filter.all">All</span></button>
+        <button class="filter-tab font-body text-sm px-5 py-2.5 border" style="color:#4A6688;border-color:#C0D8F5;" data-filter="development"><span data-i18n="projects.filter.development">Development</span></button>
+        <button class="filter-tab font-body text-sm px-5 py-2.5 border" style="color:#4A6688;border-color:#C0D8F5;" data-filter="land"><span data-i18n="projects.filter.land">Land</span></button>
+        <button class="filter-tab font-body text-sm px-5 py-2.5 border" style="color:#4A6688;border-color:#C0D8F5;" data-filter="consultancy"><span data-i18n="projects.filter.consultancy">Consultancy</span></button>
+        <button class="filter-tab font-body text-sm px-5 py-2.5 border" style="color:#4A6688;border-color:#C0D8F5;" data-filter="offmarket"><span data-i18n="projects.filter.offmarket">Off-Market</span></button>
+      </div>
+
+      <!-- Grid -->
+      <div id="project-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+
+        <!-- Card 1: Development -->
+        <div class="reveal-scale project-card bg-white shadow-brand" data-category="development">
+          <div class="relative overflow-hidden" style="aspect-ratio:4/3;">
+            <img src="brand_asset/Integer-vastgoed-3652128000.jpg" alt="Business Park Rotterdam" class="w-full h-full object-cover object-center" />
+            <div class="card-overlay absolute inset-0 opacity-0" style="background:linear-gradient(to top,rgba(10,22,40,.75) 0%,transparent 55%);"></div>
+            <div class="absolute inset-0" style="background:rgba(22,41,102,0.10);mix-blend-mode:multiply;"></div>
+            <div class="absolute top-3 left-3"><span class="font-display-sc text-xs px-3 py-1.5" style="background:#162966;color:white;letter-spacing:.1em;">Development</span></div>
+          </div>
+          <div class="p-6">
+            <p class="font-body text-xs mb-2" style="color:#8FBAF5;letter-spacing:.06em;">Rotterdam, NL · 2018</p>
+            <h3 class="font-display font-bold text-lg mb-2" style="color:#0F1E40;">Business Park, Rotterdam</h3>
+            <div style="width:24px;height:1px;background:#5A8AE8;margin-bottom:.75rem;"></div>
+            <p class="font-body text-sm" style="line-height:1.65;color:#4A6688;">Mixed-use commercial development, 18,000 m² GLA, co-development advisory.</p>
+          </div>
+        </div>
+
+        <!-- Card 2: Development -->
+        <div class="reveal-scale project-card bg-white shadow-brand" data-category="development">
+          <div class="relative overflow-hidden" style="aspect-ratio:4/3;">
+            <img src="brand_asset/Allura-impressie-8-3393380940.png" alt="Logistics Hub Venlo" class="w-full h-full object-cover object-center" />
+            <div class="card-overlay absolute inset-0 opacity-0" style="background:linear-gradient(to top,rgba(10,22,40,.75) 0%,transparent 55%);"></div>
+            <div class="absolute inset-0" style="background:rgba(22,41,102,0.10);mix-blend-mode:multiply;"></div>
+            <div class="absolute top-3 left-3"><span class="font-display-sc text-xs px-3 py-1.5" style="background:#162966;color:white;letter-spacing:.1em;">Development</span></div>
+          </div>
+          <div class="p-6">
+            <p class="font-body text-xs mb-2" style="color:#8FBAF5;letter-spacing:.06em;">Venlo, NL · 2021</p>
+            <h3 class="font-display font-bold text-lg mb-2" style="color:#0F1E40;">Logistics Hub, Venlo</h3>
+            <div style="width:24px;height:1px;background:#5A8AE8;margin-bottom:.75rem;"></div>
+            <p class="font-body text-sm" style="line-height:1.65;color:#4A6688;">35,000 m² cross-dock facility, land acquisition & development oversight.</p>
+          </div>
+        </div>
+
+        <!-- Card 3: Development -->
+        <div class="reveal-scale project-card bg-white shadow-brand" data-category="development">
+          <div class="relative overflow-hidden" style="aspect-ratio:4/3;">
+            <img src="brand_asset/Sobha-Riverside-Crescent-3-scaled-3887588423.jpg" alt="Mixed-Use Antwerp" class="w-full h-full object-cover object-center" />
+            <div class="card-overlay absolute inset-0 opacity-0" style="background:linear-gradient(to top,rgba(10,22,40,.75) 0%,transparent 55%);"></div>
+            <div class="absolute inset-0" style="background:rgba(22,41,102,0.10);mix-blend-mode:multiply;"></div>
+            <div class="absolute top-3 left-3"><span class="font-display-sc text-xs px-3 py-1.5" style="background:#162966;color:white;letter-spacing:.1em;">Development</span></div>
+          </div>
+          <div class="p-6">
+            <p class="font-body text-xs mb-2" style="color:#8FBAF5;letter-spacing:.06em;">Antwerp, BE · 2015</p>
+            <h3 class="font-display font-bold text-lg mb-2" style="color:#0F1E40;">Mixed-Use Scheme, Antwerp</h3>
+            <div style="width:24px;height:1px;background:#5A8AE8;margin-bottom:.75rem;"></div>
+            <p class="font-body text-sm" style="line-height:1.65;color:#4A6688;">Retail & office mixed-use, zoning advisory, capital introduction.</p>
+          </div>
+        </div>
+
+        <!-- Card 4: Land -->
+        <div class="reveal-scale project-card bg-white shadow-brand" data-category="land">
+          <div class="relative overflow-hidden" style="aspect-ratio:4/3;">
+            <img src="brand_asset/best-luxury-properties-vastgoed-in-dubai-hills-estate-555845509.jpg" alt="Agricultural Land Noord-Brabant" class="w-full h-full object-cover object-center" />
+            <div class="card-overlay absolute inset-0 opacity-0" style="background:linear-gradient(to top,rgba(10,22,40,.75) 0%,transparent 55%);"></div>
+            <div class="absolute inset-0" style="background:rgba(22,41,102,0.12);mix-blend-mode:multiply;"></div>
+            <div class="absolute top-3 left-3"><span class="font-display-sc text-xs px-3 py-1.5" style="background:#1E3A8A;color:white;letter-spacing:.1em;">Land</span></div>
+          </div>
+          <div class="p-6">
+            <p class="font-body text-xs mb-2" style="color:#8FBAF5;letter-spacing:.06em;">Noord-Brabant, NL · 2019</p>
+            <h3 class="font-display font-bold text-lg mb-2" style="color:#0F1E40;">Agricultural Land, Noord-Brabant</h3>
+            <div style="width:24px;height:1px;background:#5A8AE8;margin-bottom:.75rem;"></div>
+            <p class="font-body text-sm" style="line-height:1.65;color:#4A6688;">64 ha agricultural re-designation, industrial zone advisory & off-market acquisition.</p>
+          </div>
+        </div>
+
+        <!-- Card 5: Land -->
+        <div class="reveal-scale project-card bg-white shadow-brand" data-category="land">
+          <div class="relative overflow-hidden" style="aspect-ratio:4/3;">
+            <img src="brand_asset/Integer-vastgoed-3652128000.jpg" alt="Brownfield Ruhr Valley" class="w-full h-full object-cover object-bottom" />
+            <div class="card-overlay absolute inset-0 opacity-0" style="background:linear-gradient(to top,rgba(10,22,40,.75) 0%,transparent 55%);"></div>
+            <div class="absolute inset-0" style="background:rgba(22,41,102,0.14);mix-blend-mode:multiply;"></div>
+            <div class="absolute top-3 left-3"><span class="font-display-sc text-xs px-3 py-1.5" style="background:#1E3A8A;color:white;letter-spacing:.1em;">Land</span></div>
+          </div>
+          <div class="p-6">
+            <p class="font-body text-xs mb-2" style="color:#8FBAF5;letter-spacing:.06em;">Ruhr Valley, DE · 2017</p>
+            <h3 class="font-display font-bold text-lg mb-2" style="color:#0F1E40;">Brownfield Site, Ruhr Valley</h3>
+            <div style="width:24px;height:1px;background:#5A8AE8;margin-bottom:.75rem;"></div>
+            <p class="font-body text-sm" style="line-height:1.65;color:#4A6688;">Former industrial site, 28 ha, remediation advisory & logistics re-purpose.</p>
+          </div>
+        </div>
+
+        <!-- Card 6: Land -->
+        <div class="reveal-scale project-card bg-white shadow-brand" data-category="land">
+          <div class="relative overflow-hidden" style="aspect-ratio:4/3;">
+            <img src="brand_asset/68d01d61ffd3b4b45366c345_unnamed+2-755626930.png" alt="Strategic Plot Málaga" class="w-full h-full object-cover object-center" />
+            <div class="card-overlay absolute inset-0 opacity-0" style="background:linear-gradient(to top,rgba(10,22,40,.75) 0%,transparent 55%);"></div>
+            <div class="absolute inset-0" style="background:rgba(22,41,102,0.12);mix-blend-mode:multiply;"></div>
+            <div class="absolute top-3 left-3"><span class="font-display-sc text-xs px-3 py-1.5" style="background:#1E3A8A;color:white;letter-spacing:.1em;">Land</span></div>
+          </div>
+          <div class="p-6">
+            <p class="font-body text-xs mb-2" style="color:#8FBAF5;letter-spacing:.06em;">Málaga, ES · 2022</p>
+            <h3 class="font-display font-bold text-lg mb-2" style="color:#0F1E40;">Strategic Plot, Málaga</h3>
+            <div style="width:24px;height:1px;background:#5A8AE8;margin-bottom:.75rem;"></div>
+            <p class="font-body text-sm" style="line-height:1.65;color:#4A6688;">Coastal commercial land, 12 ha, off-market sourcing & planning advisory.</p>
+          </div>
+        </div>
+
+        <!-- Card 7: Consultancy -->
+        <div class="reveal-scale project-card bg-white shadow-brand" data-category="consultancy">
+          <div class="relative overflow-hidden" style="aspect-ratio:4/3;">
+            <img src="brand_asset/kempinski-residences-the-creek-dubai-10-Copy-1676774748.jpg" alt="Portfolio Review Amsterdam" class="w-full h-full object-cover object-center" />
+            <div class="card-overlay absolute inset-0 opacity-0" style="background:linear-gradient(to top,rgba(10,22,40,.75) 0%,transparent 55%);"></div>
+            <div class="absolute inset-0" style="background:rgba(22,41,102,0.10);mix-blend-mode:multiply;"></div>
+            <div class="absolute top-3 left-3"><span class="font-display-sc text-xs px-3 py-1.5" style="background:#2D5FC4;color:white;letter-spacing:.1em;">Consultancy</span></div>
+          </div>
+          <div class="p-6">
+            <p class="font-body text-xs mb-2" style="color:#8FBAF5;letter-spacing:.06em;">Amsterdam, NL · 2020</p>
+            <h3 class="font-display font-bold text-lg mb-2" style="color:#0F1E40;">Portfolio Review, Amsterdam</h3>
+            <div style="width:24px;height:1px;background:#5A8AE8;margin-bottom:.75rem;"></div>
+            <p class="font-body text-sm" style="line-height:1.65;color:#4A6688;">Independent review of €120M commercial portfolio for institutional client.</p>
+          </div>
+        </div>
+
+        <!-- Card 8: Consultancy -->
+        <div class="reveal-scale project-card bg-white shadow-brand" data-category="consultancy">
+          <div class="relative overflow-hidden" style="aspect-ratio:4/3;">
+            <img src="brand_asset/o_1ifke15aq1mmu6229hfp7188ul-398846151.jpg" alt="Market Entry Spain" class="w-full h-full object-cover object-center" />
+            <div class="card-overlay absolute inset-0 opacity-0" style="background:linear-gradient(to top,rgba(10,22,40,.75) 0%,transparent 55%);"></div>
+            <div class="absolute inset-0" style="background:rgba(22,41,102,0.10);mix-blend-mode:multiply;"></div>
+            <div class="absolute top-3 left-3"><span class="font-display-sc text-xs px-3 py-1.5" style="background:#2D5FC4;color:white;letter-spacing:.1em;">Consultancy</span></div>
+          </div>
+          <div class="p-6">
+            <p class="font-body text-xs mb-2" style="color:#8FBAF5;letter-spacing:.06em;">Spain · 2016</p>
+            <h3 class="font-display font-bold text-lg mb-2" style="color:#0F1E40;">Market Entry Strategy, Spain</h3>
+            <div style="width:24px;height:1px;background:#5A8AE8;margin-bottom:.75rem;"></div>
+            <p class="font-body text-sm" style="line-height:1.65;color:#4A6688;">Full market entry analysis for Dutch family office entering Spanish commercial RE.</p>
+          </div>
+        </div>
+
+        <!-- Card 9: Consultancy -->
+        <div class="reveal-scale project-card bg-white shadow-brand" data-category="consultancy">
+          <div class="relative overflow-hidden" style="aspect-ratio:4/3;">
+            <img src="brand_asset/living-in-da-vinci-tower-by-pagani-in-dubai-met-best-luxury-properties-3651870008.jpg" alt="Acquisition Advisory Istanbul" class="w-full h-full object-cover object-center" />
+            <div class="card-overlay absolute inset-0 opacity-0" style="background:linear-gradient(to top,rgba(10,22,40,.75) 0%,transparent 55%);"></div>
+            <div class="absolute inset-0" style="background:rgba(22,41,102,0.10);mix-blend-mode:multiply;"></div>
+            <div class="absolute top-3 left-3"><span class="font-display-sc text-xs px-3 py-1.5" style="background:#2D5FC4;color:white;letter-spacing:.1em;">Consultancy</span></div>
+          </div>
+          <div class="p-6">
+            <p class="font-body text-xs mb-2" style="color:#8FBAF5;letter-spacing:.06em;">Istanbul, TR · 2023</p>
+            <h3 class="font-display font-bold text-lg mb-2" style="color:#0F1E40;">Acquisition Advisory, Istanbul</h3>
+            <div style="width:24px;height:1px;background:#5A8AE8;margin-bottom:.75rem;"></div>
+            <p class="font-body text-sm" style="line-height:1.65;color:#4A6688;">Due diligence & valuation advisory on Turkish commercial asset for European investor.</p>
+          </div>
+        </div>
+
+        <!-- Card 10: Off-Market -->
+        <div class="reveal-scale project-card bg-white shadow-brand" data-category="offmarket">
+          <div class="relative overflow-hidden" style="aspect-ratio:4/3;">
+            <img src="brand_asset/Villa-Dubai-1024x559-3946281534.webp" alt="Office Complex Utrecht" class="w-full h-full object-cover object-center" />
+            <div class="card-overlay absolute inset-0 opacity-0" style="background:linear-gradient(to top,rgba(10,22,40,.75) 0%,transparent 55%);"></div>
+            <div class="absolute inset-0" style="background:rgba(22,41,102,0.12);mix-blend-mode:multiply;"></div>
+            <div class="absolute top-3 left-3"><span class="font-display-sc text-xs px-3 py-1.5" style="background:#0A1628;color:#8FBAF5;border:1px solid rgba(90,138,232,.3);letter-spacing:.1em;">Off-Market</span></div>
+          </div>
+          <div class="p-6">
+            <p class="font-body text-xs mb-2" style="color:#8FBAF5;letter-spacing:.06em;">Utrecht, NL · 2014</p>
+            <h3 class="font-display font-bold text-lg mb-2" style="color:#0F1E40;">Office Complex, Utrecht</h3>
+            <div style="width:24px;height:1px;background:#5A8AE8;margin-bottom:.75rem;"></div>
+            <p class="font-body text-sm" style="line-height:1.65;color:#4A6688;">11,000 m² prime office, fully off-market introduction & transaction management.</p>
+          </div>
+        </div>
+
+        <!-- Card 11: Off-Market -->
+        <div class="reveal-scale project-card bg-white shadow-brand" data-category="offmarket">
+          <div class="relative overflow-hidden" style="aspect-ratio:4/3;">
+            <img src="brand_asset/best-luxury-properties-vastgoed-in-dubai-hills-estate-555845509.jpg" alt="Retail Asset Seville" class="w-full h-full object-cover object-center" />
+            <div class="card-overlay absolute inset-0 opacity-0" style="background:linear-gradient(to top,rgba(10,22,40,.75) 0%,transparent 55%);"></div>
+            <div class="absolute inset-0" style="background:rgba(22,41,102,0.12);mix-blend-mode:multiply;"></div>
+            <div class="absolute top-3 left-3"><span class="font-display-sc text-xs px-3 py-1.5" style="background:#0A1628;color:#8FBAF5;border:1px solid rgba(90,138,232,.3);letter-spacing:.1em;">Off-Market</span></div>
+          </div>
+          <div class="p-6">
+            <p class="font-body text-xs mb-2" style="color:#8FBAF5;letter-spacing:.06em;">Seville, ES · 2020</p>
+            <h3 class="font-display font-bold text-lg mb-2" style="color:#0F1E40;">Retail Asset, Seville</h3>
+            <div style="width:24px;height:1px;background:#5A8AE8;margin-bottom:.75rem;"></div>
+            <p class="font-body text-sm" style="line-height:1.65;color:#4A6688;">Prime high-street retail, €8.5M off-market transaction, buyer-side representation.</p>
+          </div>
+        </div>
+
+        <!-- Card 12: Off-Market -->
+        <div class="reveal-scale project-card bg-white shadow-brand" data-category="offmarket">
+          <div class="relative overflow-hidden" style="aspect-ratio:4/3;">
+            <img src="brand_asset/Allura-impressie-8-3393380940.png" alt="Industrial Portfolio Germany" class="w-full h-full object-cover object-center" />
+            <div class="card-overlay absolute inset-0 opacity-0" style="background:linear-gradient(to top,rgba(10,22,40,.75) 0%,transparent 55%);"></div>
+            <div class="absolute inset-0" style="background:rgba(22,41,102,0.12);mix-blend-mode:multiply;"></div>
+            <div class="absolute top-3 left-3"><span class="font-display-sc text-xs px-3 py-1.5" style="background:#0A1628;color:#8FBAF5;border:1px solid rgba(90,138,232,.3);letter-spacing:.1em;">Off-Market</span></div>
+          </div>
+          <div class="p-6">
+            <p class="font-body text-xs mb-2" style="color:#8FBAF5;letter-spacing:.06em;">Germany · 2022</p>
+            <h3 class="font-display font-bold text-lg mb-2" style="color:#0F1E40;">Industrial Portfolio, Germany</h3>
+            <div style="width:24px;height:1px;background:#5A8AE8;margin-bottom:.75rem;"></div>
+            <p class="font-body text-sm" style="line-height:1.65;color:#4A6688;">5-asset industrial portfolio, €42M, full off-market sourcing & sale coordination.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer style="background:#0A1628;" class="pt-16 pb-8">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12 pb-12" style="border-bottom:1px solid rgba(255,255,255,.06);">
+        <div>
+          <img src="brand_asset/image001.png" alt="Smits & Wouters" class="h-16 w-auto mb-4" style="background:white;padding:4px 10px;border-radius:4px;" />
+          <p class="font-body text-sm" style="line-height:1.65;color:rgba(255,255,255,.35);" data-i18n="footer.tagline">International commercial real estate — discreet, expert, results-driven.</p>
+        </div>
+        <div>
+          <p class="font-display-sc text-xs mb-4" style="color:#5A8AE8;letter-spacing:.14em;">Navigation</p>
+          <nav class="flex flex-col gap-2.5">
+            <a href="index.html" class="font-body text-sm" style="color:rgba(255,255,255,.45);transition:color .2s ease;" onmouseover="this.style.color='rgba(255,255,255,.85)'" onmouseout="this.style.color='rgba(255,255,255,.45)'" data-i18n="nav.home">Home</a>
+            <a href="services.html" class="font-body text-sm" style="color:rgba(255,255,255,.45);transition:color .2s ease;" onmouseover="this.style.color='rgba(255,255,255,.85)'" onmouseout="this.style.color='rgba(255,255,255,.45)'" data-i18n="nav.services">Services</a>
+            <a href="projects.html" class="font-body text-sm" style="color:rgba(255,255,255,.45);transition:color .2s ease;" onmouseover="this.style.color='rgba(255,255,255,.85)'" onmouseout="this.style.color='rgba(255,255,255,.45)'" data-i18n="nav.projects">Projects</a>
+            <a href="about.html" class="font-body text-sm" style="color:rgba(255,255,255,.45);transition:color .2s ease;" onmouseover="this.style.color='rgba(255,255,255,.85)'" onmouseout="this.style.color='rgba(255,255,255,.45)'" data-i18n="nav.about">About</a>
+            <a href="contact.html" class="font-body text-sm" style="color:rgba(255,255,255,.45);transition:color .2s ease;" onmouseover="this.style.color='rgba(255,255,255,.85)'" onmouseout="this.style.color='rgba(255,255,255,.45)'" data-i18n="nav.contact">Contact</a>
+          </nav>
+        </div>
+        <div>
+          <p class="font-display-sc text-xs mb-4" style="color:#5A8AE8;letter-spacing:.14em;" data-i18n="footer.established">Established 1989</p>
+          <address class="not-italic">
+            <p class="font-body text-sm mb-1.5" style="color:rgba(255,255,255,.45);" data-i18n="footer.address">Pastoriestraat 1, 6921BV Duiven, The Netherlands</p>
+            <a href="tel:+31650698090" class="font-body text-sm" style="color:rgba(255,255,255,.45);transition:color .2s ease;" onmouseover="this.style.color='#8FBAF5'" onmouseout="this.style.color='rgba(255,255,255,.45)'" data-i18n="footer.phone">+31(0)6 50698090</a>
+          </address>
+        </div>
+      </div>
+      <div class="flex flex-col md:flex-row justify-between items-center gap-3">
+        <p class="font-body text-xs" style="color:rgba(255,255,255,.2);letter-spacing:.04em;" data-i18n="footer.copyright">© 1989–2026 Smits & Wouters. All rights reserved.</p>
+        <p class="font-body text-xs" style="color:rgba(255,255,255,.15);">smitsenwouters.com</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/i18n.js"></script>
+  <script>
+    const header = document.getElementById('site-header');
+    window.addEventListener('scroll', () => { header.classList.toggle('scrolled', window.scrollY > 40); }, { passive:true });
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobile-menu');
+    let menuOpen = false;
+    hamburger.addEventListener('click', () => { menuOpen = !menuOpen; mobileMenu.classList.toggle('hidden', !menuOpen); });
+
+    // Filter
+    const filterBar = document.getElementById('filter-bar');
+    const cards = document.querySelectorAll('#project-grid [data-category]');
+    filterBar.addEventListener('click', e => {
+      const tab = e.target.closest('[data-filter]');
+      if (!tab) return;
+      filterBar.querySelectorAll('.filter-tab').forEach(t => {
+        t.classList.remove('active');
+        t.style.color = '#4A6688';
+        t.style.borderColor = '#C0D8F5';
+        t.style.fontWeight = '';
+      });
+      tab.classList.add('active');
+      tab.style.color = '#162966';
+      tab.style.borderColor = '#162966';
+      tab.style.fontWeight = '600';
+      const filter = tab.dataset.filter;
+      cards.forEach(card => {
+        card.style.display = (filter === 'all' || card.dataset.category === filter) ? '' : 'none';
+      });
+    });
+  </script>
+  <script src="js/animations.js"></script>
+</body>
+</html>
