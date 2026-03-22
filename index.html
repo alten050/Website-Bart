@@ -252,8 +252,9 @@
     <div class="max-w-7xl mx-auto px-6 lg:px-8">
       <div class="flex items-center justify-between h-20">
 
-        <a href="index.html" class="flex-shrink-0 btn">
-          <img src="brand_asset/image001.png" alt="Smits & Wouters" class="h-12 w-auto" style="background:white;padding:3px 8px;border-radius:4px;" />
+        <a href="index.html" class="flex-shrink-0 btn flex flex-col leading-none gap-0.5">
+          <span class="font-display font-bold" style="font-size:1.3rem;letter-spacing:-0.02em;color:white;line-height:1;">Smits <span style="font-family:'Inter',system-ui,sans-serif;font-weight:300;">&amp;</span> Wouters</span>
+          <span class="font-display-sc" style="font-size:0.5rem;letter-spacing:.15em;color:rgba(255,255,255,.5);">Vastgoed Investment Consultancy</span>
         </a>
 
         <nav class="hidden md:flex items-center gap-8">
@@ -318,7 +319,7 @@
     <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 pt-32 pb-24 w-full">
       <div class="max-w-3xl">
         <!-- Company name — large display wordmark -->
-        <h1 class="hero-name font-display text-white font-bold mb-4" style="font-size:clamp(3.2rem,7vw,6rem);line-height:1.04;letter-spacing:-0.03em;">Smits &amp; Wouters</h1>
+        <h1 class="hero-name font-display text-white font-bold mb-4" style="font-size:clamp(3.2rem,7vw,6rem);line-height:1.04;letter-spacing:-0.03em;">Smits <span style="font-family:'Inter',system-ui,sans-serif;font-weight:300;">&amp;</span> Wouters</h1>
         <p class="hero-eyebrow font-display-sc text-brand-300 text-xs mb-8" style="letter-spacing:.18em;" data-i18n="home.hero.eyebrow">International Commercial Real Estate</p>
         <!-- Accent rule -->
         <div class="hero-rule flex items-center gap-3 mb-6">
@@ -468,7 +469,7 @@
             <div class="absolute inset-0 flex flex-col justify-between p-8 pointer-events-none">
               <!-- Top: logo badge -->
               <div>
-                <img src="brand_asset/image001.png" alt="Smits & Wouters" style="height:48px;width:auto;background:white;padding:4px 10px;border-radius:4px;opacity:.95;" />
+                <img src="brand_asset/huisje SW.jpg" alt="Smits & Wouters" style="height:48px;width:auto;background:white;padding:4px 10px;border-radius:4px;opacity:.95;" />
               </div>
               <!-- Bottom: founding year + tagline -->
               <div>
@@ -513,7 +514,7 @@
     <div class="max-w-7xl mx-auto px-6 lg:px-8">
       <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12 pb-12" style="border-bottom:1px solid rgba(255,255,255,.06);">
         <div>
-          <img src="brand_asset/image001.png" alt="Smits & Wouters" class="h-16 w-auto mb-4" style="background:white;padding:4px 10px;border-radius:4px;" />
+          <img src="brand_asset/huisje SW.jpg" alt="Smits & Wouters" class="h-16 w-auto mb-4" style="background:white;padding:4px 10px;border-radius:4px;" />
           <p class="font-body text-sm" style="line-height:1.65;color:rgba(255,255,255,.35);" data-i18n="footer.tagline">International commercial real estate — discreet, expert, results-driven.</p>
         </div>
         <div>
@@ -529,6 +530,7 @@
         <div>
           <p class="font-display-sc text-xs mb-4" style="color:#5A8AE8;letter-spacing:.14em;" data-i18n="footer.established">Established 1989</p>
           <address class="not-italic">
+            <p class="font-body text-xs mb-1" style="color:rgba(255,255,255,.22);letter-spacing:.06em;text-transform:uppercase;">Hoofdkantoor</p>
             <p class="font-body text-sm mb-1.5" style="color:rgba(255,255,255,.45);" data-i18n="footer.address">Pastoriestraat 1, 6921BV Duiven, The Netherlands</p>
             <a href="tel:+31650698090" class="font-body text-sm" style="color:rgba(255,255,255,.45);transition:color .2s ease;" onmouseover="this.style.color='#8FBAF5'" onmouseout="this.style.color='rgba(255,255,255,.45)'" data-i18n="footer.phone">+31(0)6 50698090</a>
           </address>
@@ -536,7 +538,11 @@
       </div>
       <div class="flex flex-col md:flex-row justify-between items-center gap-3">
         <p class="font-body text-xs" style="color:rgba(255,255,255,.2);letter-spacing:.04em;" data-i18n="footer.copyright">© 1989–2026 Smits & Wouters. All rights reserved.</p>
-        <p class="font-body text-xs" style="color:rgba(255,255,255,.15);">smitsenwouters.com</p>
+        <div class="flex items-center gap-4">
+          <a href="privacy.html" class="font-body text-xs" style="color:rgba(255,255,255,.25);transition:color .2s ease;" onmouseover="this.style.color='rgba(255,255,255,.6)'" onmouseout="this.style.color='rgba(255,255,255,.25)'" data-i18n="footer.privacy">Privacy Statement</a>
+          <span style="color:rgba(255,255,255,.12);">·</span>
+          <p class="font-body text-xs" style="color:rgba(255,255,255,.15);">smitsenwouters.com</p>
+        </div>
       </div>
     </div>
   </footer>
