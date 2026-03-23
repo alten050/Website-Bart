@@ -2,6 +2,7 @@
 <html lang="en" data-page="contact">
 <head>
   <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="brand_asset/image001.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact Smits & Wouters — Pastoriestraat 1, Duiven | +31 6 50698090</title>
   <meta name="description" content="Contact Smits & Wouters — Pastoriestraat 1, 6921BV Duiven, Netherlands. Phone: +31(0)6 50698090. Confidential first consultations welcome." />
@@ -241,17 +242,17 @@
               <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mb-5">
                 <div>
                   <label class="form-label" for="name" data-i18n="contact.form.name.label">Full Name</label>
-                  <input type="text" id="name" name="name" class="form-field" data-i18n-placeholder="contact.form.name.placeholder" placeholder="Your full name" required />
+                  <input type="text" id="name" name="name" class="form-field" data-i18n-placeholder="contact.form.name.placeholder" placeholder="Your full name" required maxlength="100" />
                 </div>
                 <div>
                   <label class="form-label" for="email" data-i18n="contact.form.email.label">Email Address</label>
-                  <input type="email" id="email" name="email" class="form-field" data-i18n-placeholder="contact.form.email.placeholder" placeholder="your@email.com" required />
+                  <input type="email" id="email" name="email" class="form-field" data-i18n-placeholder="contact.form.email.placeholder" placeholder="your@email.com" required maxlength="255" />
                 </div>
               </div>
               <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mb-5">
                 <div>
                   <label class="form-label" for="phone" data-i18n="contact.form.phone.label">Phone (optional)</label>
-                  <input type="tel" id="phone" name="phone" class="form-field" data-i18n-placeholder="contact.form.phone.placeholder" placeholder="+31 ..." />
+                  <input type="tel" id="phone" name="phone" class="form-field" data-i18n-placeholder="contact.form.phone.placeholder" placeholder="+31 ..." maxlength="30" />
                 </div>
                 <div>
                   <label class="form-label" for="subject" data-i18n="contact.form.subject.label">Subject</label>
@@ -266,7 +267,7 @@
               </div>
               <div class="mb-8">
                 <label class="form-label" for="message" data-i18n="contact.form.message.label">Message</label>
-                <textarea id="message" name="message" rows="6" class="form-field resize-none" data-i18n-placeholder="contact.form.message.placeholder" placeholder="How can we help you?" required></textarea>
+                <textarea id="message" name="message" rows="6" class="form-field resize-none" data-i18n-placeholder="contact.form.message.placeholder" placeholder="How can we help you?" required maxlength="2000"></textarea>
               </div>
               <!-- Privacy consent -->
               <div class="flex items-start gap-3 pt-1">
@@ -326,7 +327,7 @@
     </div>
   </footer>
 
-  <script src="js/i18n.js"></script>
+  <script src="js/i18n.js" defer></script>
   <script>
     const header = document.getElementById('site-header');
     window.addEventListener('scroll', () => { header.classList.toggle('scrolled', window.scrollY > 40); }, { passive:true });
@@ -359,6 +360,6 @@
     });
     form.querySelectorAll('.form-field').forEach(f => f.addEventListener('input', () => f.classList.remove('error')));
   </script>
-  <script src="js/animations.js"></script>
+  <script src="js/animations.js" defer></script>
 </body>
 </html>

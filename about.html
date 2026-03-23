@@ -2,6 +2,7 @@
 <html lang="en" data-page="about">
 <head>
   <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="brand_asset/image001.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About Smits & Wouters — Commercial Real Estate Since 1989 | Duiven, Netherlands</title>
   <meta name="description" content="Smits & Wouters was founded in 1989 in Duiven, Netherlands. Independent commercial real estate consultancy grown through referral and reputation across European markets." />
@@ -365,7 +366,7 @@
     </div>
   </footer>
 
-  <script src="js/i18n.js"></script>
+  <script src="js/i18n.js" defer></script>
   <script>
     const header = document.getElementById('site-header');
     window.addEventListener('scroll', () => { header.classList.toggle('scrolled', window.scrollY > 40); }, { passive:true });
@@ -374,6 +375,6 @@
     let menuOpen = false;
     hamburger.addEventListener('click', () => { menuOpen = !menuOpen; mobileMenu.classList.toggle('hidden', !menuOpen); });
   </script>
-  <script src="js/animations.js"></script>
+  <script src="js/animations.js" defer></script>
 </body>
 </html>
