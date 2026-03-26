@@ -1,5 +1,5 @@
 ---
-name: website-security
+name: security
 description: >
   Security skill voor bedrijfswebsites en landingspagina's. Gebruik deze skill altijd wanneer er
   gewerkt wordt aan een website en veiligheid, beveiliging, security headers, XSS, HTTPS, formulieren,

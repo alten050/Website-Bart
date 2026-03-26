@@ -1,5 +1,5 @@
 ---
-name: website-seo
+name: seo
 description: >
   SEO, vindbaarheid en AI-zoekmachine optimalisatie voor bedrijfswebsites en landingspagina's.
   Gebruik deze skill altijd wanneer er gewerkt wordt aan een website en vindbaarheid,

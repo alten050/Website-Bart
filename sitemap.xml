@@ -58,6 +58,28 @@
   </url>
 
   <url>
+    <loc>https://smitsenwouters.com/opportunities.html</loc>
+    <lastmod>2026-03-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://smitsenwouters.com/opportunities.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://smitsenwouters.com/opportunities.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://smitsenwouters.com/opportunities.html"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://smitsenwouters.com/opportunities.html"/>
+  </url>
+
+  <url>
+    <loc>https://smitsenwouters.com/mandate.html</loc>
+    <lastmod>2026-03-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://smitsenwouters.com/mandate.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://smitsenwouters.com/mandate.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://smitsenwouters.com/mandate.html"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://smitsenwouters.com/mandate.html"/>
+  </url>
+
+  <url>
     <loc>https://smitsenwouters.com/privacy.html</loc>
     <lastmod>2026-03-26</lastmod>
     <changefreq>yearly</changefreq>

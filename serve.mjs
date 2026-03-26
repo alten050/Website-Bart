@@ -67,7 +67,9 @@ const SECURITY_HEADERS = {
 const server = http.createServer((req, res) => {
   // Block path traversal attacks (e.g. ../../etc/passwd)
   const rawPath = req.url.split('?')[0];
-  const safePath = path.normalize(rawPath).replace(/^(\.\.[/\\])+/, '');
+  let decodedPath;
+  try { decodedPath = decodeURIComponent(rawPath); } catch { decodedPath = rawPath; }
+  const safePath = path.normalize(decodedPath).replace(/^(\.\.[/\\])+/, '');
   let urlPath = safePath === '/' ? '/index.html' : safePath;
 
   const filePath = path.join(__dirname, urlPath);
