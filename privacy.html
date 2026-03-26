@@ -2,22 +2,46 @@
 <html lang="nl">
 <head>
   <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="brand_asset/image001.png" />
+  <link rel="icon" type="image/png" href="brand_asset/image001.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Privacyverklaring — Smits & Wouters</title>
-  <meta name="description" content="Privacyverklaring van Smits & Wouters Vastgoed Investment Consultancy, Pastoriestraat 1, 6921BV Duiven." />
+  <title>Privacyverklaring — Smits &amp; Wouters</title>
+  <meta name="description" content="Privacyverklaring van Smits &amp; Wouters Vastgoed Investment Consultancy, Pastoriestraat 1, 6921BV Duiven." />
   <meta name="robots" content="noindex, follow" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Playfair+Display+SC:wght@400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Playfair+Display+SC:wght@400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: { 950:'#0A1628', 900:'#0F1E40', 800:'#162966', 700:'#1E3A8A', 600:'#2D5FC4', 500:'#4070D8', 400:'#5A8AE8', 300:'#8FBAF5', 200:'#C0D8F5', 100:'#E4EEF9', 50:'#F0F6FC' },
+          },
+          fontFamily: {
+            display: ['Playfair Display','Georgia','serif'],
+            'display-sc': ['Playfair Display SC','Georgia','serif'],
+            body: ['Inter','system-ui','sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
   <style>
     body { font-family:'Inter',system-ui,sans-serif; color:#0F1E40; background:#F0F6FC; }
     h1,h2,h3 { font-family:'Playfair Display',Georgia,serif; }
     .font-display-sc { font-family:'Playfair Display SC',Georgia,serif; }
-    #site-header { background-color:rgba(10,22,40,0.97); }
+    .shadow-brand { box-shadow:0 1px 2px rgba(22,41,102,.06),0 4px 12px rgba(22,41,102,.12),0 16px 32px rgba(22,41,102,.09); }
+    .sw-lang-active { color:#8FBAF5 !important; font-weight:600; border-bottom:2px solid #8FBAF5; }
+    nav a.nav-active { color:#8FBAF5; border-bottom:2px solid #8FBAF5; }
+    .grain { background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E"); }
     .btn { transition:transform .2s ease,opacity .2s ease; }
-    .btn:hover { transform:translateY(-1px); opacity:.9; }
+    .btn:hover { transform:translateY(-1px); opacity:.92; }
+    .btn:active { transform:translateY(0); opacity:.85; }
+    #site-header { background-color:rgba(10,22,40,0.82); backdrop-filter:blur(10px); transition:background-color .3s ease, box-shadow .3s ease; }
+    #site-header.scrolled { background-color:rgba(10,22,40,.97); backdrop-filter:blur(12px); box-shadow:0 1px 0 rgba(90,138,232,.15); }
+    .nav-link { transition:color .2s ease; }
+    .nav-link:hover { color:white; }
     .prose-section h2 { font-size:1.25rem; font-weight:700; color:#0F1E40; margin-bottom:.75rem; margin-top:2.5rem; padding-top:2rem; border-top:1px solid #E4EEF9; }
     .prose-section h2:first-child { margin-top:0; border-top:none; padding-top:0; }
     .prose-section p { line-height:1.82; color:#4A6688; margin-bottom:1rem; font-size:.95rem; }
@@ -31,20 +55,42 @@
 <body class="antialiased">
 
   <!-- HEADER -->
-  <header id="site-header" class="fixed top-0 left-0 right-0 z-50" style="backdrop-filter:blur(10px);">
+  <header id="site-header" class="fixed top-0 left-0 right-0 z-50">
     <div class="max-w-7xl mx-auto px-6 lg:px-8">
       <div class="flex items-center justify-between h-20">
         <a href="index.html" class="btn flex flex-col leading-none gap-0.5">
-          <span style="font-family:'Playfair Display',serif;font-weight:700;font-size:1.3rem;letter-spacing:-0.02em;color:white;line-height:1;">Smits <span style="font-family:'Inter',system-ui,sans-serif;font-weight:300;">&amp;</span> Wouters</span>
+          <span class="font-display font-bold" style="font-size:1.3rem;letter-spacing:-0.02em;color:white;line-height:1;">Smits <span style="font-family:'Inter',system-ui,sans-serif;font-weight:300;">&amp;</span> Wouters</span>
           <span class="font-display-sc" style="font-size:0.5rem;letter-spacing:.15em;color:rgba(255,255,255,.5);">Vastgoed Investment Consultancy</span>
         </a>
         <nav class="hidden md:flex items-center gap-8">
-          <a href="index.html" class="btn font-body text-sm font-medium text-white/60" style="letter-spacing:.04em;">Home</a>
-          <a href="services.html" class="btn font-body text-sm font-medium text-white/60" style="letter-spacing:.04em;">Services</a>
-          <a href="projects.html" class="btn font-body text-sm font-medium text-white/60" style="letter-spacing:.04em;">Projects</a>
-          <a href="about.html" class="btn font-body text-sm font-medium text-white/60" style="letter-spacing:.04em;">About</a>
-          <a href="contact.html" class="btn font-body text-sm font-medium text-white/60" style="letter-spacing:.04em;">Contact</a>
+          <a href="index.html" class="nav-link font-body text-sm font-medium text-white/60 pb-0.5" style="letter-spacing:.04em;"><span data-i18n="nav.home">Home</span></a>
+          <a href="services.html" class="nav-link font-body text-sm font-medium text-white/60 pb-0.5" style="letter-spacing:.04em;"><span data-i18n="nav.services">Services</span></a>
+          <a href="projects.html" class="nav-link font-body text-sm font-medium text-white/60 pb-0.5" style="letter-spacing:.04em;"><span data-i18n="nav.projects">Projects</span></a>
+          <a href="about.html" class="nav-link font-body text-sm font-medium text-white/60 pb-0.5" style="letter-spacing:.04em;"><span data-i18n="nav.about">About</span></a>
+          <a href="contact.html" class="nav-link font-body text-sm font-medium text-white/60 pb-0.5" style="letter-spacing:.04em;"><span data-i18n="nav.contact">Contact</span></a>
         </nav>
+        <div class="flex items-center gap-4">
+          <div class="hidden md:flex items-center gap-1 pl-4" style="border-left:1px solid rgba(255,255,255,.15);">
+            <button data-lang="en" class="font-body text-xs font-medium text-white/50 px-1.5 py-1 btn" style="letter-spacing:.09em;">EN</button><span class="text-white/15 text-xs">|</span>
+            <button data-lang="nl" class="font-body text-xs font-medium text-white/50 px-1.5 py-1 btn" style="letter-spacing:.09em;">NL</button><span class="text-white/15 text-xs">|</span>
+            <button data-lang="es" class="font-body text-xs font-medium text-white/50 px-1.5 py-1 btn" style="letter-spacing:.09em;">ES</button><span class="text-white/15 text-xs">|</span>
+            <button data-lang="tr" class="font-body text-xs font-medium text-white/50 px-1.5 py-1 btn" style="letter-spacing:.09em;">TR</button>
+          </div>
+          <button id="hamburger" class="md:hidden flex flex-col gap-1.5 p-2 btn" aria-label="Open menu"><span class="block w-6 h-px bg-white"></span><span class="block w-6 h-px bg-white"></span><span class="block w-6 h-px bg-white"></span></button>
+        </div>
+      </div>
+    </div>
+    <div id="mobile-menu" class="hidden fixed inset-0 top-20 z-40 flex flex-col p-8 gap-6 md:hidden" style="background:#0A1628;">
+      <a href="index.html" class="font-display text-2xl text-white/70 border-b pb-4" style="border-color:rgba(255,255,255,.08);"><span data-i18n="nav.home">Home</span></a>
+      <a href="services.html" class="font-display text-2xl text-white/70 border-b pb-4" style="border-color:rgba(255,255,255,.08);"><span data-i18n="nav.services">Services</span></a>
+      <a href="projects.html" class="font-display text-2xl text-white/70 border-b pb-4" style="border-color:rgba(255,255,255,.08);"><span data-i18n="nav.projects">Projects</span></a>
+      <a href="about.html" class="font-display text-2xl text-white/70 border-b pb-4" style="border-color:rgba(255,255,255,.08);"><span data-i18n="nav.about">About</span></a>
+      <a href="contact.html" class="font-display text-2xl text-white/70 border-b pb-4" style="border-color:rgba(255,255,255,.08);"><span data-i18n="nav.contact">Contact</span></a>
+      <div class="flex items-center gap-3 pt-2">
+        <button data-lang="en" class="font-body text-sm font-medium text-white/60 px-3 py-1.5 btn" style="border:1px solid rgba(255,255,255,.15);letter-spacing:.09em;">EN</button>
+        <button data-lang="nl" class="font-body text-sm font-medium text-white/60 px-3 py-1.5 btn" style="border:1px solid rgba(255,255,255,.15);letter-spacing:.09em;">NL</button>
+        <button data-lang="es" class="font-body text-sm font-medium text-white/60 px-3 py-1.5 btn" style="border:1px solid rgba(255,255,255,.15);letter-spacing:.09em;">ES</button>
+        <button data-lang="tr" class="font-body text-sm font-medium text-white/60 px-3 py-1.5 btn" style="border:1px solid rgba(255,255,255,.15);letter-spacing:.09em;">TR</button>
       </div>
     </div>
   </header>
@@ -62,7 +108,7 @@
   <!-- CONTENT -->
   <main class="py-16">
     <div class="max-w-3xl mx-auto px-6 lg:px-8">
-      <div class="bg-white p-10 lg:p-14" style="box-shadow:0 1px 2px rgba(22,41,102,.06),0 4px 12px rgba(22,41,102,.10),0 16px 32px rgba(22,41,102,.07);">
+      <div class="bg-white p-10 lg:p-14 shadow-brand">
 
         <div class="prose-section">
 
@@ -161,18 +207,53 @@
   </main>
 
   <!-- FOOTER -->
-  <footer style="background:#0A1628;" class="pt-12 pb-8">
+  <footer style="background:#0A1628;" class="pt-16 pb-8">
     <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12 pb-12" style="border-bottom:1px solid rgba(255,255,255,.06);">
+        <div>
+          <img src="brand_asset/huisje SW.jpg" alt="Smits &amp; Wouters" class="h-16 w-auto mb-4" style="background:white;padding:4px 10px;border-radius:4px;" />
+          <p class="font-body text-sm" style="line-height:1.65;color:rgba(255,255,255,.35);" data-i18n="footer.tagline">International commercial real estate — discreet, expert, results-driven.</p>
+        </div>
+        <div>
+          <p class="font-display-sc text-xs mb-4" style="color:#5A8AE8;letter-spacing:.14em;">Navigation</p>
+          <nav class="flex flex-col gap-2.5">
+            <a href="index.html" class="font-body text-sm" style="color:rgba(255,255,255,.45);transition:color .2s ease;" onmouseover="this.style.color='rgba(255,255,255,.85)'" onmouseout="this.style.color='rgba(255,255,255,.45)'" data-i18n="nav.home">Home</a>
+            <a href="services.html" class="font-body text-sm" style="color:rgba(255,255,255,.45);transition:color .2s ease;" onmouseover="this.style.color='rgba(255,255,255,.85)'" onmouseout="this.style.color='rgba(255,255,255,.45)'" data-i18n="nav.services">Services</a>
+            <a href="projects.html" class="font-body text-sm" style="color:rgba(255,255,255,.45);transition:color .2s ease;" onmouseover="this.style.color='rgba(255,255,255,.85)'" onmouseout="this.style.color='rgba(255,255,255,.45)'" data-i18n="nav.projects">Projects</a>
+            <a href="about.html" class="font-body text-sm" style="color:rgba(255,255,255,.45);transition:color .2s ease;" onmouseover="this.style.color='rgba(255,255,255,.85)'" onmouseout="this.style.color='rgba(255,255,255,.45)'" data-i18n="nav.about">About</a>
+            <a href="contact.html" class="font-body text-sm" style="color:rgba(255,255,255,.45);transition:color .2s ease;" onmouseover="this.style.color='rgba(255,255,255,.85)'" onmouseout="this.style.color='rgba(255,255,255,.45)'" data-i18n="nav.contact">Contact</a>
+          </nav>
+        </div>
+        <div>
+          <p class="font-display-sc text-xs mb-4" style="color:#5A8AE8;letter-spacing:.14em;" data-i18n="footer.established">Established 1989</p>
+          <address class="not-italic">
+            <p class="font-body text-xs mb-1" style="color:rgba(255,255,255,.22);letter-spacing:.06em;text-transform:uppercase;">Hoofdkantoor</p>
+            <p class="font-body text-sm mb-1.5" style="color:rgba(255,255,255,.45);" data-i18n="footer.address">Pastoriestraat 1, 6921BV Duiven, The Netherlands</p>
+            <a href="tel:+31650698090" class="font-body text-sm" style="color:rgba(255,255,255,.45);transition:color .2s ease;" onmouseover="this.style.color='#8FBAF5'" onmouseout="this.style.color='rgba(255,255,255,.45)'" data-i18n="footer.phone">+31(0)6 50698090</a>
+          </address>
+        </div>
+      </div>
       <div class="flex flex-col md:flex-row justify-between items-center gap-3">
-        <p class="font-body text-xs" style="color:rgba(255,255,255,.2);letter-spacing:.04em;">© 1989–2026 Smits &amp; Wouters. Alle rechten voorbehouden.</p>
+        <p class="font-body text-xs" style="color:rgba(255,255,255,.2);letter-spacing:.04em;" data-i18n="footer.copyright">© 1989–2026 Smits &amp; Wouters. All rights reserved.</p>
         <div class="flex items-center gap-4">
-          <a href="privacy.html" class="font-body text-xs" style="color:rgba(255,255,255,.45);">Privacyverklaring</a>
+          <a href="privacy.html" class="font-body text-xs" style="color:rgba(255,255,255,.25);transition:color .2s ease;" onmouseover="this.style.color='rgba(255,255,255,.6)'" onmouseout="this.style.color='rgba(255,255,255,.25)'" data-i18n="footer.privacy">Privacy Statement</a>
           <span style="color:rgba(255,255,255,.12);">·</span>
           <p class="font-body text-xs" style="color:rgba(255,255,255,.15);">smitsenwouters.com</p>
         </div>
       </div>
     </div>
   </footer>
+
+  <script src="js/i18n.js" defer></script>
+  <script>
+    const header = document.getElementById('site-header');
+    window.addEventListener('scroll', () => { header.classList.toggle('scrolled', window.scrollY > 40); }, { passive:true });
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobile-menu');
+    let menuOpen = false;
+    hamburger.addEventListener('click', () => { menuOpen = !menuOpen; mobileMenu.classList.toggle('hidden', !menuOpen); });
+  </script>
+  <script src="js/animations.js" defer></script>
 
 </body>
 </html>
