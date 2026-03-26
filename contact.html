@@ -159,7 +159,7 @@
             <button data-lang="es" class="font-body text-xs font-medium text-white/50 px-1.5 py-1 btn" style="letter-spacing:.09em;">ES</button><span class="text-white/15 text-xs">|</span>
             <button data-lang="tr" class="font-body text-xs font-medium text-white/50 px-1.5 py-1 btn" style="letter-spacing:.09em;">TR</button>
           </div>
-          <button id="hamburger" class="md:hidden p-2 btn" aria-label="Open menu"><span class="bar"></span><span class="bar"></span><span class="bar"></span></button>
+          <button id="hamburger" class="md:hidden p-2 btn" aria-label="Open menu" aria-expanded="false"><span class="bar"></span><span class="bar"></span><span class="bar"></span></button>
         </div>
       </div>
     </div>
@@ -337,11 +337,13 @@
     const hamburger = document.getElementById('hamburger');
     const mobileMenu = document.getElementById('mobile-menu');
     let menuOpen = false;
-    hamburger.addEventListener('click', () => { menuOpen = !menuOpen; hamburger.classList.toggle('is-open', menuOpen); mobileMenu.classList.toggle('is-open', menuOpen); });
+    hamburger.addEventListener('click', () => { menuOpen = !menuOpen; hamburger.classList.toggle('is-open', menuOpen); mobileMenu.classList.toggle('is-open', menuOpen); hamburger.setAttribute('aria-expanded', menuOpen); });
 
     const form = document.getElementById('contact-form');
     const successBanner = document.getElementById('form-success');
-    form.addEventListener('submit', e => {
+    // ↓ Replace YOUR_FORM_ID with your Formspree endpoint ID (formspree.io → New Form → copy ID)
+    const FORMSPREE_ENDPOINT = 'https://formspree.io/f/YOUR_FORM_ID';
+    form.addEventListener('submit', async e => {
       e.preventDefault();
       // Honeypot check — bots fill hidden fields, humans don't
       if (document.getElementById('website').value !== '') return;
@@ -355,10 +357,27 @@
       if (emailField.value && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailField.value)) {
         emailField.classList.add('error'); valid = false;
       }
-      if (valid) {
-        form.style.display = 'none';
-        successBanner.classList.remove('hidden');
-        successBanner.style.display = 'flex';
+      if (!valid) return;
+      const submitBtn = form.querySelector('[type="submit"]');
+      submitBtn.disabled = true;
+      submitBtn.style.opacity = '0.6';
+      try {
+        const resp = await fetch(FORMSPREE_ENDPOINT, {
+          method: 'POST',
+          headers: { 'Accept': 'application/json' },
+          body: new FormData(form)
+        });
+        if (resp.ok) {
+          form.style.display = 'none';
+          successBanner.classList.remove('hidden');
+          successBanner.style.display = 'flex';
+        } else {
+          throw new Error('Server error');
+        }
+      } catch {
+        submitBtn.disabled = false;
+        submitBtn.style.opacity = '';
+        alert('Er is een fout opgetreden bij het verzenden. Bel ons op +31(0)6 50698090 of stuur een e-mail.');
       }
     });
     form.querySelectorAll('.form-field').forEach(f => f.addEventListener('input', () => f.classList.remove('error')));

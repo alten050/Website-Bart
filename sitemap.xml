@@ -57,4 +57,15 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://smitsenwouters.com/contact.html"/>
   </url>
 
+  <url>
+    <loc>https://smitsenwouters.com/privacy.html</loc>
+    <lastmod>2026-03-26</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://smitsenwouters.com/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://smitsenwouters.com/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://smitsenwouters.com/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://smitsenwouters.com/privacy.html"/>
+  </url>
+
 </urlset>

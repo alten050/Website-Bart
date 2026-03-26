@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/png" href="brand_asset/image001.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Page Not Found — Smits &amp; Wouters</title>
+  <meta name="robots" content="noindex, follow" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Playfair+Display+SC:wght@400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: { 950:'#0A1628', 900:'#0F1E40', 800:'#162966', 700:'#1E3A8A', 600:'#2D5FC4', 500:'#4070D8', 400:'#5A8AE8', 300:'#8FBAF5', 200:'#C0D8F5', 100:'#E4EEF9', 50:'#F0F6FC' },
+          },
+          fontFamily: {
+            display: ['Playfair Display','Georgia','serif'],
+            'display-sc': ['Playfair Display SC','Georgia','serif'],
+            body: ['Inter','system-ui','sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+  <style>
+    body { font-family:'Inter',system-ui,sans-serif; color:#0F1E40; }
+    h1,h2,h3 { font-family:'Playfair Display',Georgia,serif; }
+    .font-display-sc { font-family:'Playfair Display SC',Georgia,serif; }
+    .shadow-brand { box-shadow:0 1px 2px rgba(22,41,102,.06),0 4px 12px rgba(22,41,102,.12),0 16px 32px rgba(22,41,102,.09); }
+    .sw-lang-active { color:#8FBAF5 !important; font-weight:600; border-bottom:2px solid #8FBAF5; }
+    .btn { transition:transform .2s ease,opacity .2s ease; }
+    .btn:hover { transform:translateY(-1px); opacity:.92; }
+    .btn:active { transform:translateY(0); opacity:.85; }
+    #site-header.scrolled { background-color:rgba(10,22,40,.97);backdrop-filter:blur(12px);box-shadow:0 1px 0 rgba(90,138,232,.15); }
+    .nav-link { transition:color .2s ease; }
+    .nav-link:hover { color:white; }
+    .grain { background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E"); }
+    @keyframes fadeUp { from{opacity:0;transform:translateY(28px)} to{opacity:1;transform:translateY(0)} }
+    .fade-up { animation:fadeUp .9s cubic-bezier(.22,1,.36,1) both; }
+    .fade-up-d1 { animation:fadeUp .9s cubic-bezier(.22,1,.36,1) .15s both; }
+    .fade-up-d2 { animation:fadeUp .9s cubic-bezier(.22,1,.36,1) .3s both; }
+  </style>
+  <link rel="stylesheet" href="css/enhancements.css" />
+</head>
+<body class="antialiased" style="background:#0A1628;min-height:100vh;display:flex;flex-direction:column;">
+<div id="scroll-progress"></div>
+
+  <!-- HEADER -->
+  <header id="site-header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300" style="background-color:rgba(10,22,40,0.82);backdrop-filter:blur(10px);">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <a href="index.html" class="btn flex flex-col leading-none gap-0.5">
+          <span class="font-display font-bold" style="font-size:1.3rem;letter-spacing:-0.02em;color:white;line-height:1;">Smits <span style="font-family:'Inter',system-ui,sans-serif;font-weight:300;">&amp;</span> Wouters</span>
+          <span class="font-display-sc" style="font-size:0.5rem;letter-spacing:.15em;color:rgba(255,255,255,.5);">Vastgoed Investment Consultancy</span>
+        </a>
+        <nav class="hidden md:flex items-center gap-8">
+          <a href="index.html" class="nav-link font-body text-sm font-medium text-white/60 pb-0.5" style="letter-spacing:.04em;" data-i18n="nav.home">Home</a>
+          <a href="services.html" class="nav-link font-body text-sm font-medium text-white/60 pb-0.5" style="letter-spacing:.04em;" data-i18n="nav.services">Services</a>
+          <a href="projects.html" class="nav-link font-body text-sm font-medium text-white/60 pb-0.5" style="letter-spacing:.04em;" data-i18n="nav.projects">Projects</a>
+          <a href="about.html" class="nav-link font-body text-sm font-medium text-white/60 pb-0.5" style="letter-spacing:.04em;" data-i18n="nav.about">About</a>
+          <a href="contact.html" class="nav-link font-body text-sm font-medium text-white/60 pb-0.5" style="letter-spacing:.04em;" data-i18n="nav.contact">Contact</a>
+        </nav>
+        <div class="flex items-center gap-4">
+          <div class="hidden md:flex items-center gap-1 pl-4" style="border-left:1px solid rgba(255,255,255,.15);">
+            <button data-lang="en" class="font-body text-xs font-medium text-white/50 px-1.5 py-1 btn" style="letter-spacing:.09em;">EN</button><span class="text-white/15 text-xs">|</span>
+            <button data-lang="nl" class="font-body text-xs font-medium text-white/50 px-1.5 py-1 btn" style="letter-spacing:.09em;">NL</button><span class="text-white/15 text-xs">|</span>
+            <button data-lang="es" class="font-body text-xs font-medium text-white/50 px-1.5 py-1 btn" style="letter-spacing:.09em;">ES</button><span class="text-white/15 text-xs">|</span>
+            <button data-lang="tr" class="font-body text-xs font-medium text-white/50 px-1.5 py-1 btn" style="letter-spacing:.09em;">TR</button>
+          </div>
+          <button id="hamburger" class="md:hidden p-2 btn" aria-label="Open menu" aria-expanded="false"><span class="bar"></span><span class="bar"></span><span class="bar"></span></button>
+        </div>
+      </div>
+    </div>
+    <div id="mobile-menu" class="fixed inset-0 top-20 z-40 flex flex-col p-8 gap-6 md:hidden" style="background:#0A1628;">
+      <a href="index.html" class="font-display text-2xl text-white/70 border-b pb-4" style="border-color:rgba(255,255,255,.08);" data-i18n="nav.home">Home</a>
+      <a href="services.html" class="font-display text-2xl text-white/70 border-b pb-4" style="border-color:rgba(255,255,255,.08);" data-i18n="nav.services">Services</a>
+      <a href="projects.html" class="font-display text-2xl text-white/70 border-b pb-4" style="border-color:rgba(255,255,255,.08);" data-i18n="nav.projects">Projects</a>
+      <a href="about.html" class="font-display text-2xl text-white/70 border-b pb-4" style="border-color:rgba(255,255,255,.08);" data-i18n="nav.about">About</a>
+      <a href="contact.html" class="font-display text-2xl text-white/70 border-b pb-4" style="border-color:rgba(255,255,255,.08);" data-i18n="nav.contact">Contact</a>
+      <div class="flex items-center gap-3 pt-2 lang-row">
+        <button data-lang="en" class="font-body text-sm font-medium text-white/60 px-3 py-1.5 btn" style="border:1px solid rgba(255,255,255,.15);letter-spacing:.09em;">EN</button>
+        <button data-lang="nl" class="font-body text-sm font-medium text-white/60 px-3 py-1.5 btn" style="border:1px solid rgba(255,255,255,.15);letter-spacing:.09em;">NL</button>
+        <button data-lang="es" class="font-body text-sm font-medium text-white/60 px-3 py-1.5 btn" style="border:1px solid rgba(255,255,255,.15);letter-spacing:.09em;">ES</button>
+        <button data-lang="tr" class="font-body text-sm font-medium text-white/60 px-3 py-1.5 btn" style="border:1px solid rgba(255,255,255,.15);letter-spacing:.09em;">TR</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- 404 CONTENT -->
+  <main class="flex-1 flex items-center justify-center relative overflow-hidden" style="padding-top:5rem;">
+    <!-- Background grain -->
+    <div class="absolute inset-0 grain pointer-events-none" style="opacity:.25;"></div>
+    <!-- Subtle radial glow -->
+    <div class="absolute inset-0 pointer-events-none" style="background:radial-gradient(ellipse 60% 50% at 50% 50%, rgba(22,41,102,0.45) 0%, transparent 70%);"></div>
+    <!-- Ghost 404 number -->
+    <div class="absolute inset-0 flex items-center justify-center pointer-events-none select-none" aria-hidden="true">
+      <span class="font-display font-bold" style="font-size:clamp(14rem,30vw,22rem);color:rgba(255,255,255,.025);line-height:1;letter-spacing:-.05em;">404</span>
+    </div>
+
+    <div class="relative z-10 text-center px-6 py-24">
+      <p class="fade-up font-display-sc text-xs mb-5" style="color:#8FBAF5;letter-spacing:.18em;">Page Not Found</p>
+      <h1 class="fade-up-d1 font-display font-bold text-white mb-6" style="font-size:clamp(2rem,5vw,3.2rem);line-height:1.08;letter-spacing:-0.03em;">
+        This page doesn't exist.
+      </h1>
+      <div class="fade-up-d1 flex justify-center mb-6"><div style="width:48px;height:1px;background:#5A8AE8;"></div></div>
+      <p class="fade-up-d1 font-body mb-10" style="color:rgba(255,255,255,.42);font-size:1.05rem;line-height:1.7;max-width:400px;margin-left:auto;margin-right:auto;">
+        The page you are looking for may have moved or no longer exists. Return to the homepage or contact us directly.
+      </p>
+      <div class="fade-up-d2 flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="index.html" class="btn inline-flex items-center gap-2 px-9 py-3.5 font-body text-sm font-semibold" style="background:#162966;color:white;letter-spacing:.06em;">
+          <svg width="15" height="15" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18"/></svg>
+          Return to Homepage
+        </a>
+        <a href="contact.html" class="btn inline-flex items-center gap-2 px-9 py-3.5 font-body text-sm font-semibold" style="background:transparent;color:rgba(255,255,255,.6);border:1px solid rgba(255,255,255,.18);letter-spacing:.06em;">
+          Contact Us
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer style="background:#080F1E;" class="pt-12 pb-8">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-10 pb-10" style="border-bottom:1px solid rgba(255,255,255,.06);">
+        <div>
+          <img src="brand_asset/huisje SW.jpg" alt="Smits &amp; Wouters" class="h-16 w-auto mb-4" style="background:white;padding:4px 10px;border-radius:4px;" />
+          <p class="font-body text-sm" style="line-height:1.65;color:rgba(255,255,255,.35);" data-i18n="footer.tagline">International commercial real estate — discreet, expert, results-driven.</p>
+        </div>
+        <div>
+          <p class="font-display-sc text-xs mb-4" style="color:#5A8AE8;letter-spacing:.14em;">Navigation</p>
+          <nav class="flex flex-col gap-2.5">
+            <a href="index.html" class="font-body text-sm" style="color:rgba(255,255,255,.45);transition:color .2s ease;" onmouseover="this.style.color='rgba(255,255,255,.85)'" onmouseout="this.style.color='rgba(255,255,255,.45)'" data-i18n="nav.home">Home</a>
+            <a href="services.html" class="font-body text-sm" style="color:rgba(255,255,255,.45);transition:color .2s ease;" onmouseover="this.style.color='rgba(255,255,255,.85)'" onmouseout="this.style.color='rgba(255,255,255,.45)'" data-i18n="nav.services">Services</a>
+            <a href="projects.html" class="font-body text-sm" style="color:rgba(255,255,255,.45);transition:color .2s ease;" onmouseover="this.style.color='rgba(255,255,255,.85)'" onmouseout="this.style.color='rgba(255,255,255,.45)'" data-i18n="nav.projects">Projects</a>
+            <a href="about.html" class="font-body text-sm" style="color:rgba(255,255,255,.45);transition:color .2s ease;" onmouseover="this.style.color='rgba(255,255,255,.85)'" onmouseout="this.style.color='rgba(255,255,255,.45)'" data-i18n="nav.about">About</a>
+            <a href="contact.html" class="font-body text-sm" style="color:rgba(255,255,255,.45);transition:color .2s ease;" onmouseover="this.style.color='rgba(255,255,255,.85)'" onmouseout="this.style.color='rgba(255,255,255,.45)'" data-i18n="nav.contact">Contact</a>
+          </nav>
+        </div>
+        <div>
+          <p class="font-display-sc text-xs mb-4" style="color:#5A8AE8;letter-spacing:.14em;" data-i18n="footer.established">Established 1989</p>
+          <address class="not-italic">
+            <p class="font-body text-xs mb-1" style="color:rgba(255,255,255,.22);letter-spacing:.06em;text-transform:uppercase;">Hoofdkantoor</p>
+            <p class="font-body text-sm mb-1.5" style="color:rgba(255,255,255,.45);" data-i18n="footer.address">Pastoriestraat 1, 6921BV Duiven, The Netherlands</p>
+            <a href="tel:+31650698090" class="font-body text-sm" style="color:rgba(255,255,255,.45);transition:color .2s ease;" onmouseover="this.style.color='#8FBAF5'" onmouseout="this.style.color='rgba(255,255,255,.45)'" data-i18n="footer.phone">+31(0)6 50698090</a>
+          </address>
+        </div>
+      </div>
+      <div class="flex flex-col md:flex-row justify-between items-center gap-3">
+        <p class="font-body text-xs" style="color:rgba(255,255,255,.2);letter-spacing:.04em;" data-i18n="footer.copyright">© 1989–2026 Smits &amp; Wouters. All rights reserved.</p>
+        <div class="flex items-center gap-4">
+          <a href="privacy.html" class="font-body text-xs" style="color:rgba(255,255,255,.25);transition:color .2s ease;" onmouseover="this.style.color='rgba(255,255,255,.6)'" onmouseout="this.style.color='rgba(255,255,255,.25)'" data-i18n="footer.privacy">Privacy Statement</a>
+          <span style="color:rgba(255,255,255,.12);">·</span>
+          <p class="font-body text-xs" style="color:rgba(255,255,255,.15);">smitsenwouters.com</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/i18n.js" defer></script>
+  <script>
+    const header = document.getElementById('site-header');
+    window.addEventListener('scroll', () => { header.classList.toggle('scrolled', window.scrollY > 40); }, { passive:true });
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobile-menu');
+    let menuOpen = false;
+    hamburger.addEventListener('click', () => { menuOpen = !menuOpen; hamburger.classList.toggle('is-open', menuOpen); mobileMenu.classList.toggle('is-open', menuOpen); hamburger.setAttribute('aria-expanded', menuOpen); });
+  </script>
+</body>
+</html>

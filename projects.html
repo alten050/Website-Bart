@@ -127,7 +127,7 @@
             <button data-lang="es" class="font-body text-xs font-medium text-white/50 px-1.5 py-1 btn" style="letter-spacing:.09em;">ES</button><span class="text-white/15 text-xs">|</span>
             <button data-lang="tr" class="font-body text-xs font-medium text-white/50 px-1.5 py-1 btn" style="letter-spacing:.09em;">TR</button>
           </div>
-          <button id="hamburger" class="md:hidden p-2 btn" aria-label="Open menu"><span class="bar"></span><span class="bar"></span><span class="bar"></span></button>
+          <button id="hamburger" class="md:hidden p-2 btn" aria-label="Open menu" aria-expanded="false"><span class="bar"></span><span class="bar"></span><span class="bar"></span></button>
         </div>
       </div>
     </div>
@@ -419,7 +419,7 @@
     const hamburger = document.getElementById('hamburger');
     const mobileMenu = document.getElementById('mobile-menu');
     let menuOpen = false;
-    hamburger.addEventListener('click', () => { menuOpen = !menuOpen; hamburger.classList.toggle('is-open', menuOpen); mobileMenu.classList.toggle('is-open', menuOpen); });
+    hamburger.addEventListener('click', () => { menuOpen = !menuOpen; hamburger.classList.toggle('is-open', menuOpen); mobileMenu.classList.toggle('is-open', menuOpen); hamburger.setAttribute('aria-expanded', menuOpen); });
 
     // Filter
     const filterBar = document.getElementById('filter-bar');
