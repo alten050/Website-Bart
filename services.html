@@ -127,8 +127,11 @@
     .reveal-scale { opacity:0; transform:scale(.96); transition:opacity .7s cubic-bezier(.22,1,.36,1),transform .7s cubic-bezier(.22,1,.36,1); }
     .is-visible   { opacity:1 !important; transform:none !important; }
   </style>
+  <link rel="stylesheet" href="css/enhancements.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/bundled/lenis.min.js"></script>
 </head>
 <body class="antialiased" style="background:#F0F6FC;">
+<div id="scroll-progress"></div>
 
   <!-- HEADER -->
   <header id="site-header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300" style="background-color:rgba(10,22,40,0.82);backdrop-filter:blur(10px);">
@@ -152,17 +155,17 @@
             <button data-lang="es" class="font-body text-xs font-medium text-white/50 px-1.5 py-1 btn" style="letter-spacing:.09em;">ES</button><span class="text-white/15 text-xs">|</span>
             <button data-lang="tr" class="font-body text-xs font-medium text-white/50 px-1.5 py-1 btn" style="letter-spacing:.09em;">TR</button>
           </div>
-          <button id="hamburger" class="md:hidden flex flex-col gap-1.5 p-2 btn" aria-label="Open menu"><span class="block w-6 h-px bg-white"></span><span class="block w-6 h-px bg-white"></span><span class="block w-6 h-px bg-white"></span></button>
+          <button id="hamburger" class="md:hidden p-2 btn" aria-label="Open menu"><span class="bar"></span><span class="bar"></span><span class="bar"></span></button>
         </div>
       </div>
     </div>
-    <div id="mobile-menu" class="hidden fixed inset-0 top-20 z-40 flex flex-col p-8 gap-6 md:hidden" style="background:#0A1628;">
+    <div id="mobile-menu" class="fixed inset-0 top-20 z-40 flex flex-col p-8 gap-6 md:hidden" style="background:#0A1628;">
       <a href="index.html" class="font-display text-2xl text-white/70 border-b pb-4" style="border-color:rgba(255,255,255,.08);"><span data-i18n="nav.home">Home</span></a>
       <a href="services.html" class="font-display text-2xl text-white border-b pb-4" style="border-color:rgba(255,255,255,.08);"><span data-i18n="nav.services">Services</span></a>
       <a href="projects.html" class="font-display text-2xl text-white/70 border-b pb-4" style="border-color:rgba(255,255,255,.08);"><span data-i18n="nav.projects">Projects</span></a>
       <a href="about.html" class="font-display text-2xl text-white/70 border-b pb-4" style="border-color:rgba(255,255,255,.08);"><span data-i18n="nav.about">About</span></a>
       <a href="contact.html" class="font-display text-2xl text-white/70 border-b pb-4" style="border-color:rgba(255,255,255,.08);"><span data-i18n="nav.contact">Contact</span></a>
-      <div class="flex items-center gap-3 pt-2">
+      <div class="flex items-center gap-3 pt-2 lang-row">
         <button data-lang="en" class="font-body text-sm font-medium text-white/60 px-3 py-1.5 btn" style="border:1px solid rgba(255,255,255,.15);letter-spacing:.09em;">EN</button>
         <button data-lang="nl" class="font-body text-sm font-medium text-white/60 px-3 py-1.5 btn" style="border:1px solid rgba(255,255,255,.15);letter-spacing:.09em;">NL</button>
         <button data-lang="es" class="font-body text-sm font-medium text-white/60 px-3 py-1.5 btn" style="border:1px solid rgba(255,255,255,.15);letter-spacing:.09em;">ES</button>
@@ -181,7 +184,7 @@
     <div class="absolute inset-0 grain pointer-events-none" style="opacity:.4;"></div>
     <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 pb-16 pt-36">
       <p class="font-display-sc text-xs mb-4" style="color:#8FBAF5;letter-spacing:.16em;" data-i18n="services.hero.eyebrow">What We Do</p>
-      <h1 class="font-display text-white font-bold mb-4" style="font-size:clamp(2.4rem,5vw,4rem);line-height:1.06;letter-spacing:-0.03em;" data-i18n="services.hero.headline">Our Services</h1>
+      <h1 class="font-display text-white font-bold mb-4 hero-gradient-text" style="font-size:clamp(2.4rem,5vw,4rem);line-height:1.06;letter-spacing:-0.03em;" data-i18n="services.hero.headline">Our Services</h1>
       <div class="flex items-center gap-3 mb-4">
         <div style="width:40px;height:1px;background:#5A8AE8;"></div>
       </div>
@@ -362,7 +365,7 @@
     const hamburger = document.getElementById('hamburger');
     const mobileMenu = document.getElementById('mobile-menu');
     let menuOpen = false;
-    hamburger.addEventListener('click', () => { menuOpen = !menuOpen; mobileMenu.classList.toggle('hidden', !menuOpen); });
+    hamburger.addEventListener('click', () => { menuOpen = !menuOpen; hamburger.classList.toggle('is-open', menuOpen); mobileMenu.classList.toggle('is-open', menuOpen); });
   </script>
   <script src="js/animations.js" defer></script>
 </body>

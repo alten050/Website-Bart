@@ -1,0 +1,150 @@
+/* ═══════════════════════════════════════════════════════════════
+   Smits & Wouters — Animation Enhancements
+   Page load · Scroll progress · Gradient text · Hamburger morph
+   Mobile menu stagger · Image zoom · Reduced motion
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ── Page load fade-in ──────────────────────────────────────── */
+@keyframes sw-page-in {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+body {
+  animation: sw-page-in 0.55s cubic-bezier(.22,1,.36,1) both;
+}
+
+/* ── Scroll progress bar ────────────────────────────────────── */
+#scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: var(--scroll-pct, 0%);
+  height: 2px;
+  background: linear-gradient(90deg, #5A8AE8 0%, #8FBAF5 60%, #C0D8F5 100%);
+  z-index: 200;
+  pointer-events: none;
+  transition: width 80ms linear;
+  transform-origin: left center;
+}
+
+/* ── Gradient text on hero headlines ────────────────────────── */
+.hero-gradient-text {
+  background: linear-gradient(110deg, #ffffff 45%, #8FBAF5 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ── Hamburger → ✕ morph ────────────────────────────────────── */
+#hamburger {
+  position: relative;
+  width: 28px;
+  height: 20px;
+  flex-shrink: 0;
+  padding: 0 !important;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  gap: 0 !important;
+}
+
+#hamburger .bar {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 1.5px;
+  background: white;
+  border-radius: 1px;
+  transition:
+    top    0.32s cubic-bezier(.22,1,.36,1),
+    bottom 0.32s cubic-bezier(.22,1,.36,1),
+    transform 0.32s cubic-bezier(.22,1,.36,1),
+    opacity   0.20s ease;
+  transform-origin: center;
+}
+
+#hamburger .bar:nth-child(1) { top: 0; }
+#hamburger .bar:nth-child(2) { top: 50%; transform: translateY(-50%); }
+#hamburger .bar:nth-child(3) { bottom: 0; }
+
+#hamburger.is-open .bar:nth-child(1) {
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+}
+#hamburger.is-open .bar:nth-child(2) {
+  opacity: 0;
+  transform: translateY(-50%) scaleX(0.2);
+}
+#hamburger.is-open .bar:nth-child(3) {
+  top: 50%;
+  bottom: auto;
+  transform: translateY(-50%) rotate(-45deg);
+}
+
+/* ── Mobile menu: opacity-based visibility ──────────────────── */
+#mobile-menu {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.28s ease;
+}
+
+#mobile-menu.is-open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* ── Mobile menu: staggered item entrance ───────────────────── */
+#mobile-menu a,
+#mobile-menu .lang-row {
+  opacity: 0;
+  transform: translateY(14px);
+  transition:
+    opacity   0.42s cubic-bezier(.22,1,.36,1),
+    transform 0.42s cubic-bezier(.22,1,.36,1);
+}
+
+#mobile-menu.is-open a:nth-child(1) { opacity: 1; transform: none; transition-delay: 0.06s; }
+#mobile-menu.is-open a:nth-child(2) { opacity: 1; transform: none; transition-delay: 0.11s; }
+#mobile-menu.is-open a:nth-child(3) { opacity: 1; transform: none; transition-delay: 0.16s; }
+#mobile-menu.is-open a:nth-child(4) { opacity: 1; transform: none; transition-delay: 0.21s; }
+#mobile-menu.is-open a:nth-child(5) { opacity: 1; transform: none; transition-delay: 0.26s; }
+#mobile-menu.is-open .lang-row      { opacity: 1; transform: none; transition-delay: 0.32s; }
+
+/* ── Project card: image zoom on hover ──────────────────────── */
+.project-card .relative img {
+  transition: transform 0.65s cubic-bezier(.22,1,.36,1);
+  will-change: transform;
+}
+
+.project-card:hover .relative img {
+  transform: scale(1.05);
+}
+
+/* ── Service card: subtle arrow shift on hover ──────────────── */
+.service-card svg {
+  transition: transform 0.25s cubic-bezier(.22,1,.36,1), color 0.2s ease;
+}
+
+.service-card:hover svg {
+  transform: translateX(3px);
+}
+
+/* ── Reduced motion ─────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  body { animation: none !important; opacity: 1 !important; transform: none !important; }
+  .ken-burns { animation: none !important; }
+  #scroll-progress { transition: none !important; }
+
+  #mobile-menu a,
+  #mobile-menu .lang-row { opacity: 1 !important; transform: none !important; }
+}

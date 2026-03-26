@@ -51,8 +51,11 @@
     .prose-section a { color:#162966; text-decoration:underline; text-underline-offset:3px; }
     .prose-section strong { color:#0F1E40; font-weight:600; }
   </style>
+  <link rel="stylesheet" href="css/enhancements.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/bundled/lenis.min.js"></script>
 </head>
 <body class="antialiased">
+<div id="scroll-progress"></div>
 
   <!-- HEADER -->
   <header id="site-header" class="fixed top-0 left-0 right-0 z-50">
@@ -76,17 +79,17 @@
             <button data-lang="es" class="font-body text-xs font-medium text-white/50 px-1.5 py-1 btn" style="letter-spacing:.09em;">ES</button><span class="text-white/15 text-xs">|</span>
             <button data-lang="tr" class="font-body text-xs font-medium text-white/50 px-1.5 py-1 btn" style="letter-spacing:.09em;">TR</button>
           </div>
-          <button id="hamburger" class="md:hidden flex flex-col gap-1.5 p-2 btn" aria-label="Open menu"><span class="block w-6 h-px bg-white"></span><span class="block w-6 h-px bg-white"></span><span class="block w-6 h-px bg-white"></span></button>
+          <button id="hamburger" class="md:hidden p-2 btn" aria-label="Open menu"><span class="bar"></span><span class="bar"></span><span class="bar"></span></button>
         </div>
       </div>
     </div>
-    <div id="mobile-menu" class="hidden fixed inset-0 top-20 z-40 flex flex-col p-8 gap-6 md:hidden" style="background:#0A1628;">
+    <div id="mobile-menu" class="fixed inset-0 top-20 z-40 flex flex-col p-8 gap-6 md:hidden" style="background:#0A1628;">
       <a href="index.html" class="font-display text-2xl text-white/70 border-b pb-4" style="border-color:rgba(255,255,255,.08);"><span data-i18n="nav.home">Home</span></a>
       <a href="services.html" class="font-display text-2xl text-white/70 border-b pb-4" style="border-color:rgba(255,255,255,.08);"><span data-i18n="nav.services">Services</span></a>
       <a href="projects.html" class="font-display text-2xl text-white/70 border-b pb-4" style="border-color:rgba(255,255,255,.08);"><span data-i18n="nav.projects">Projects</span></a>
       <a href="about.html" class="font-display text-2xl text-white/70 border-b pb-4" style="border-color:rgba(255,255,255,.08);"><span data-i18n="nav.about">About</span></a>
       <a href="contact.html" class="font-display text-2xl text-white/70 border-b pb-4" style="border-color:rgba(255,255,255,.08);"><span data-i18n="nav.contact">Contact</span></a>
-      <div class="flex items-center gap-3 pt-2">
+      <div class="flex items-center gap-3 pt-2 lang-row">
         <button data-lang="en" class="font-body text-sm font-medium text-white/60 px-3 py-1.5 btn" style="border:1px solid rgba(255,255,255,.15);letter-spacing:.09em;">EN</button>
         <button data-lang="nl" class="font-body text-sm font-medium text-white/60 px-3 py-1.5 btn" style="border:1px solid rgba(255,255,255,.15);letter-spacing:.09em;">NL</button>
         <button data-lang="es" class="font-body text-sm font-medium text-white/60 px-3 py-1.5 btn" style="border:1px solid rgba(255,255,255,.15);letter-spacing:.09em;">ES</button>
@@ -99,7 +102,7 @@
   <section class="pt-36 pb-12" style="background:#0F1E40;">
     <div class="max-w-3xl mx-auto px-6 lg:px-8">
       <p class="font-display-sc text-xs mb-4" style="color:#8FBAF5;letter-spacing:.18em;" data-i18n="privacy.eyebrow">Juridisch</p>
-      <h1 style="font-family:'Playfair Display',serif;font-weight:700;font-size:clamp(2rem,4vw,3rem);line-height:1.1;letter-spacing:-0.02em;color:white;" data-i18n="privacy.headline">Privacyverklaring</h1>
+      <h1 class="hero-gradient-text" style="font-family:'Playfair Display',serif;font-weight:700;font-size:clamp(2rem,4vw,3rem);line-height:1.1;letter-spacing:-0.02em;" data-i18n="privacy.headline">Privacyverklaring</h1>
       <div style="width:40px;height:1px;background:#5A8AE8;margin-top:1.25rem;"></div>
       <p class="font-body text-sm mt-4" style="color:rgba(255,255,255,.4);" data-i18n="privacy.updated">Laatst bijgewerkt: 22 maart 2026</p>
     </div>
@@ -251,7 +254,7 @@
     const hamburger = document.getElementById('hamburger');
     const mobileMenu = document.getElementById('mobile-menu');
     let menuOpen = false;
-    hamburger.addEventListener('click', () => { menuOpen = !menuOpen; mobileMenu.classList.toggle('hidden', !menuOpen); });
+    hamburger.addEventListener('click', () => { menuOpen = !menuOpen; hamburger.classList.toggle('is-open', menuOpen); mobileMenu.classList.toggle('is-open', menuOpen); });
   </script>
   <script src="js/animations.js" defer></script>
 

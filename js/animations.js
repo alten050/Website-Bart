@@ -92,11 +92,38 @@
     }, { passive: true });
   }
 
+  // ── Lenis smooth scroll ────────────────────────────────────────
+  function initLenis() {
+    if (typeof Lenis === 'undefined') return;
+    var lenis = new Lenis({
+      duration: 1.2,
+      easing: function (t) { return Math.min(1, 1.001 - Math.pow(2, -10 * t)); },
+    });
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+    requestAnimationFrame(raf);
+  }
+
+  // ── Scroll progress bar ────────────────────────────────────────
+  function initScrollProgress() {
+    if (!document.getElementById('scroll-progress')) return;
+    var root = document.documentElement;
+    window.addEventListener('scroll', function () {
+      var max = root.scrollHeight - root.clientHeight;
+      var pct = max > 0 ? (window.scrollY / max * 100).toFixed(2) : 0;
+      root.style.setProperty('--scroll-pct', pct + '%');
+    }, { passive: true });
+  }
+
   // ── Init ───────────────────────────────────────────────────────
   document.addEventListener('DOMContentLoaded', function () {
     initReveal();
     initStagger();
     initCounters();
     initParallax();
+    initLenis();
+    initScrollProgress();
   });
 })();
