@@ -1,0 +1,22 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Screenshots (temp output)
+temporary screenshots/
+
+# Node
+node_modules/
+
+# Editor
+.vscode/
+*.swp
+*.swo
+
+# Env / secrets
+.env
+.env.local
+
+# Claude local settings (personal, not shared)
+.claude/settings.local.json

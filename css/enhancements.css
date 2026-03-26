@@ -1,8 +1,109 @@
 /* ═══════════════════════════════════════════════════════════════
-   Smits & Wouters — Animation Enhancements
-   Page load · Scroll progress · Gradient text · Hamburger morph
-   Mobile menu stagger · Image zoom · Reduced motion
+   Smits & Wouters — Shared Styles
+   Everything in this file is loaded on every page.
+   Page-specific styles live in an inline <style> in each HTML file.
    ═══════════════════════════════════════════════════════════════ */
+
+/* ── Typography base ────────────────────────────────────────── */
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  color: #0F1E40;
+  animation: sw-page-in 0.55s cubic-bezier(.22,1,.36,1) both;
+}
+
+h1, h2, h3, .font-display {
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+.font-display-sc {
+  font-family: 'Playfair Display SC', Georgia, serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* ── Shadows ────────────────────────────────────────────────── */
+.shadow-brand {
+  box-shadow:
+    0 1px 2px rgba(22,41,102,.06),
+    0 4px 12px rgba(22,41,102,.12),
+    0 16px 32px rgba(22,41,102,.09);
+}
+
+.shadow-brand-lg {
+  box-shadow:
+    0 2px 4px rgba(22,41,102,.08),
+    0 8px 24px rgba(22,41,102,.16),
+    0 32px 64px rgba(22,41,102,.12);
+}
+
+/* ── Grain overlay ──────────────────────────────────────────── */
+.grain {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
+}
+
+/* ── Navigation ─────────────────────────────────────────────── */
+.sw-lang-active {
+  color: #8FBAF5 !important;
+  font-weight: 600;
+  border-bottom: 2px solid #8FBAF5;
+}
+
+nav a.nav-active {
+  color: #8FBAF5;
+  border-bottom: 2px solid #8FBAF5;
+}
+
+.nav-link {
+  transition: color .2s ease;
+}
+
+.nav-link:hover {
+  color: white;
+}
+
+.nav-link:focus-visible {
+  outline: 2px solid #8FBAF5;
+  outline-offset: 2px;
+}
+
+/* ── Header scroll effect ───────────────────────────────────── */
+#site-header.scrolled {
+  background-color: rgba(10,22,40,.97);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 1px 0 rgba(90,138,232,.15);
+}
+
+/* ── Buttons ────────────────────────────────────────────────── */
+.btn {
+  transition: transform .2s ease, opacity .2s ease, background-color .2s ease;
+}
+
+.btn:hover  { transform: translateY(-1px); opacity: .92; }
+.btn:active { transform: translateY(0);    opacity: .85; }
+
+.btn:focus-visible {
+  outline: 2px solid #8FBAF5;
+  outline-offset: 3px;
+}
+
+/* ── Service cards ──────────────────────────────────────────── */
+.service-card {
+  transition: transform .25s cubic-bezier(.4,0,.2,1), box-shadow .25s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+}
+
+.service-card svg {
+  transition: transform 0.25s cubic-bezier(.22,1,.36,1), color 0.2s ease;
+}
+
+.service-card:hover svg {
+  transform: translateX(3px);
+}
 
 /* ── Page load fade-in ──────────────────────────────────────── */
 @keyframes sw-page-in {
@@ -10,8 +111,65 @@
   to   { opacity: 1; transform: translateY(0); }
 }
 
-body {
-  animation: sw-page-in 0.55s cubic-bezier(.22,1,.36,1) both;
+/* ── Entrance animations ────────────────────────────────────── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(28px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes kenBurns {
+  from { transform: scale(1) translateY(0); }
+  to   { transform: scale(1.07) translateY(-1%); }
+}
+
+/* Hero animation helpers (shared delays used on inner pages) */
+.hero-eyebrow {
+  animation: fadeUp .8s cubic-bezier(.22,1,.36,1) both;
+  animation-delay: .25s;
+}
+
+.hero-sub {
+  animation: fadeUp .8s cubic-bezier(.22,1,.36,1) both;
+  animation-delay: .50s;
+}
+
+.ken-burns {
+  animation: kenBurns 14s ease-out both;
+}
+
+/* ── Scroll reveal ──────────────────────────────────────────── */
+.reveal {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity .7s cubic-bezier(.22,1,.36,1), transform .7s cubic-bezier(.22,1,.36,1);
+}
+
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-32px);
+  transition: opacity .7s cubic-bezier(.22,1,.36,1), transform .7s cubic-bezier(.22,1,.36,1);
+}
+
+.reveal-right {
+  opacity: 0;
+  transform: translateX(32px);
+  transition: opacity .7s cubic-bezier(.22,1,.36,1), transform .7s cubic-bezier(.22,1,.36,1);
+}
+
+.reveal-scale {
+  opacity: 0;
+  transform: scale(.96);
+  transition: opacity .7s cubic-bezier(.22,1,.36,1), transform .7s cubic-bezier(.22,1,.36,1);
+}
+
+.is-visible {
+  opacity: 1 !important;
+  transform: none !important;
 }
 
 /* ── Scroll progress bar ────────────────────────────────────── */
@@ -119,15 +277,6 @@ body {
 
 .project-card:hover .relative img {
   transform: scale(1.05);
-}
-
-/* ── Service card: subtle arrow shift on hover ──────────────── */
-.service-card svg {
-  transition: transform 0.25s cubic-bezier(.22,1,.36,1), color 0.2s ease;
-}
-
-.service-card:hover svg {
-  transform: translateX(3px);
 }
 
 /* ── Reduced motion ─────────────────────────────────────────── */

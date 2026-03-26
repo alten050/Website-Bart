@@ -10,38 +10,12 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Playfair+Display+SC:wght@400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <script src="js/tailwind-config.js"></script>
   <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            brand: { 950:'#0A1628', 900:'#0F1E40', 800:'#162966', 700:'#1E3A8A', 600:'#2D5FC4', 500:'#4070D8', 400:'#5A8AE8', 300:'#8FBAF5', 200:'#C0D8F5', 100:'#E4EEF9', 50:'#F0F6FC' },
-          },
-          fontFamily: {
-            display: ['Playfair Display','Georgia','serif'],
-            'display-sc': ['Playfair Display SC','Georgia','serif'],
-            body: ['Inter','system-ui','sans-serif'],
-          },
-        },
-      },
-    };
-  </script>
+  <link rel="stylesheet" href="css/enhancements.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/bundled/lenis.min.js"></script>
   <style>
-    body { font-family:'Inter',system-ui,sans-serif; color:#0F1E40; background:#F0F6FC; }
-    h1,h2,h3 { font-family:'Playfair Display',Georgia,serif; }
-    .font-display-sc { font-family:'Playfair Display SC',Georgia,serif; }
-    .shadow-brand { box-shadow:0 1px 2px rgba(22,41,102,.06),0 4px 12px rgba(22,41,102,.12),0 16px 32px rgba(22,41,102,.09); }
-    .sw-lang-active { color:#8FBAF5 !important; font-weight:600; border-bottom:2px solid #8FBAF5; }
-    nav a.nav-active { color:#8FBAF5; border-bottom:2px solid #8FBAF5; }
-    .grain { background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E"); }
-    .btn { transition:transform .2s ease,opacity .2s ease; }
-    .btn:hover { transform:translateY(-1px); opacity:.92; }
-    .btn:active { transform:translateY(0); opacity:.85; }
-    #site-header { background-color:rgba(10,22,40,0.82); backdrop-filter:blur(10px); transition:background-color .3s ease, box-shadow .3s ease; }
-    #site-header.scrolled { background-color:rgba(10,22,40,.97); backdrop-filter:blur(12px); box-shadow:0 1px 0 rgba(90,138,232,.15); }
-    .nav-link { transition:color .2s ease; }
-    .nav-link:hover { color:white; }
+    /* ── privacy.html: prose content styles (page-specific) ────── */
     .prose-section h2 { font-size:1.25rem; font-weight:700; color:#0F1E40; margin-bottom:.75rem; margin-top:2.5rem; padding-top:2rem; border-top:1px solid #E4EEF9; }
     .prose-section h2:first-child { margin-top:0; border-top:none; padding-top:0; }
     .prose-section p { line-height:1.82; color:#4A6688; margin-bottom:1rem; font-size:.95rem; }
@@ -51,8 +25,6 @@
     .prose-section a { color:#162966; text-decoration:underline; text-underline-offset:3px; }
     .prose-section strong { color:#0F1E40; font-weight:600; }
   </style>
-  <link rel="stylesheet" href="css/enhancements.css" />
-  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/bundled/lenis.min.js"></script>
 </head>
 <body class="antialiased">
 <div id="scroll-progress"></div>

@@ -63,72 +63,20 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Playfair+Display+SC:wght@400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <script src="js/tailwind-config.js"></script>
   <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            brand: { 950:'#0A1628', 900:'#0F1E40', 800:'#162966', 700:'#1E3A8A', 600:'#2D5FC4', 500:'#4070D8', 400:'#5A8AE8', 300:'#8FBAF5', 200:'#C0D8F5', 100:'#E4EEF9', 50:'#F0F6FC' },
-          },
-          fontFamily: {
-            display: ['Playfair Display','Georgia','serif'],
-            'display-sc': ['Playfair Display SC','Georgia','serif'],
-            body: ['Inter','system-ui','sans-serif'],
-          },
-        },
-      },
-    };
-  </script>
+  <link rel="stylesheet" href="css/enhancements.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/bundled/lenis.min.js"></script>
   <style>
-    body { font-family:'Inter',system-ui,sans-serif; color:#0F1E40; }
-    h1,h2,h3 { font-family:'Playfair Display',Georgia,serif; }
-    .font-display-sc { font-family:'Playfair Display SC',Georgia,serif; }
-    .shadow-brand { box-shadow:0 1px 2px rgba(22,41,102,.06),0 4px 12px rgba(22,41,102,.12),0 16px 32px rgba(22,41,102,.09); }
-    .sw-lang-active { color:#8FBAF5 !important; font-weight:600; border-bottom:2px solid #8FBAF5; }
-    nav a.nav-active { color:#8FBAF5; border-bottom:2px solid #8FBAF5; }
-    .grain { background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E"); }
-    .btn { transition:transform .2s ease,opacity .2s ease; }
-    .btn:hover { transform:translateY(-1px); opacity:.92; }
-    .btn:active { transform:translateY(0); opacity:.85; }
-    #site-header.scrolled { background-color:rgba(10,22,40,.97);backdrop-filter:blur(12px);box-shadow:0 1px 0 rgba(90,138,232,.15); }
-    .nav-link { transition:color .2s ease; }
-    .nav-link:hover { color:white; }
-    html { scroll-behavior:smooth; }
-    @keyframes fadeUp { from{opacity:0;transform:translateY(28px)} to{opacity:1;transform:translateY(0)} }
+    /* ── about.html: hero timing + emblem (page-specific) ──────── */
     @keyframes kenBurns { from{transform:scale(1)} to{transform:scale(1.05)} }
     .hero-text { animation:fadeUp .9s cubic-bezier(.22,1,.36,1) both; }
     .hero-sub  { animation:fadeUp .9s cubic-bezier(.22,1,.36,1) both; animation-delay:.15s; }
     .ken-burns { animation:kenBurns 16s ease-out both; }
-    .reveal       { opacity:0; transform:translateY(32px); transition:opacity .7s cubic-bezier(.22,1,.36,1),transform .7s cubic-bezier(.22,1,.36,1); }
-    .reveal-left  { opacity:0; transform:translateX(-32px); transition:opacity .8s cubic-bezier(.22,1,.36,1),transform .8s cubic-bezier(.22,1,.36,1); }
-    .reveal-right { opacity:0; transform:translateX(32px); transition:opacity .8s cubic-bezier(.22,1,.36,1),transform .8s cubic-bezier(.22,1,.36,1); }
-    .is-visible   { opacity:1 !important; transform:none !important; }
-
-    /* Emblem frame */
-    .emblem-frame {
-      position:relative;
-      display:inline-block;
-      padding: 32px;
-      background: white;
-    }
-    .emblem-frame::before {
-      content:'';
-      position:absolute;
-      inset:10px;
-      border:1px solid rgba(22,41,102,.12);
-      pointer-events:none;
-    }
-    .emblem-frame::after {
-      content:'';
-      position:absolute;
-      inset:0;
-      border:1px solid rgba(22,41,102,.06);
-      pointer-events:none;
-    }
+    .emblem-frame { position:relative; display:inline-block; padding:32px; background:white; }
+    .emblem-frame::before { content:''; position:absolute; inset:10px; border:1px solid rgba(22,41,102,.12); pointer-events:none; }
+    .emblem-frame::after  { content:''; position:absolute; inset:0;   border:1px solid rgba(22,41,102,.06); pointer-events:none; }
   </style>
-  <link rel="stylesheet" href="css/enhancements.css" />
-  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/bundled/lenis.min.js"></script>
 </head>
 <body class="antialiased" style="background:#F0F6FC;">
 <div id="scroll-progress"></div>

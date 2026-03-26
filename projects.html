@@ -49,58 +49,20 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Playfair+Display+SC:wght@400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <script src="js/tailwind-config.js"></script>
   <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            brand: { 950:'#0A1628', 900:'#0F1E40', 800:'#162966', 700:'#1E3A8A', 600:'#2D5FC4', 500:'#4070D8', 400:'#5A8AE8', 300:'#8FBAF5', 200:'#C0D8F5', 100:'#E4EEF9', 50:'#F0F6FC' },
-          },
-          fontFamily: {
-            display: ['Playfair Display','Georgia','serif'],
-            'display-sc': ['Playfair Display SC','Georgia','serif'],
-            body: ['Inter','system-ui','sans-serif'],
-          },
-        },
-      },
-    };
-  </script>
+  <link rel="stylesheet" href="css/enhancements.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/bundled/lenis.min.js"></script>
   <style>
-    body { font-family:'Inter',system-ui,sans-serif; color:#0F1E40; }
-    h1,h2,h3,.font-display { font-family:'Playfair Display',Georgia,serif; }
-    .font-display-sc { font-family:'Playfair Display SC',Georgia,serif; }
-    .shadow-brand { box-shadow:0 1px 2px rgba(22,41,102,.06),0 4px 12px rgba(22,41,102,.12),0 16px 32px rgba(22,41,102,.09); }
-    .sw-lang-active { color:#8FBAF5 !important; font-weight:600; border-bottom:2px solid #8FBAF5; }
-    nav a.nav-active { color:#8FBAF5; border-bottom:2px solid #8FBAF5; }
-    .grain { background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E"); }
-    .btn { transition:transform .2s ease,opacity .2s ease; }
-    .btn:hover { transform:translateY(-1px); opacity:.92; }
-    .btn:active { transform:translateY(0); opacity:.85; }
-    #site-header.scrolled { background-color:rgba(10,22,40,.97);backdrop-filter:blur(12px);box-shadow:0 1px 0 rgba(90,138,232,.15); }
-    .nav-link { transition:color .2s ease; }
-    .nav-link:hover { color:white; }
-
+    /* ── projects.html: filter tabs + card overlay (page-specific) */
     .filter-tab { transition:color .2s ease,border-color .2s ease; cursor:pointer; }
     .filter-tab.active { color:#162966; border-color:#162966; font-weight:600; }
     .filter-tab:focus-visible { outline:2px solid #5A8AE8; outline-offset:2px; }
-
     .project-card { transition:transform .25s cubic-bezier(.4,0,.2,1),box-shadow .25s ease; overflow:hidden; }
     .project-card:hover { transform:translateY(-6px); box-shadow:0 8px 32px rgba(22,41,102,.18),0 2px 4px rgba(22,41,102,.08); }
     .project-card:hover .card-overlay { opacity:1; }
     .card-overlay { transition:opacity .3s ease; }
-    html { scroll-behavior:smooth; }
-    @keyframes fadeUp { from{opacity:0;transform:translateY(28px)} to{opacity:1;transform:translateY(0)} }
-    @keyframes fadeIn { from{opacity:0} to{opacity:1} }
-    @keyframes kenBurns { from{transform:scale(1)} to{transform:scale(1.07)} }
-    .hero-eyebrow { animation:fadeUp .8s cubic-bezier(.22,1,.36,1) both; animation-delay:.25s; }
-    .ken-burns { animation:kenBurns 14s ease-out both; }
-    .reveal       { opacity:0; transform:translateY(32px); transition:opacity .7s cubic-bezier(.22,1,.36,1),transform .7s cubic-bezier(.22,1,.36,1); }
-    .reveal-scale { opacity:0; transform:scale(.96); transition:opacity .7s cubic-bezier(.22,1,.36,1),transform .7s cubic-bezier(.22,1,.36,1); }
-    .is-visible   { opacity:1 !important; transform:none !important; }
   </style>
-  <link rel="stylesheet" href="css/enhancements.css" />
-  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/bundled/lenis.min.js"></script>
 </head>
 <body class="antialiased" style="background:#F0F6FC;">
 <div id="scroll-progress"></div>
