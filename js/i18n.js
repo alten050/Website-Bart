@@ -1353,6 +1353,13 @@ function applyTranslations(lang) {
   });
   // Update html lang attribute
   document.documentElement.lang = lang;
+
+  // Normalize & in display-font headings: textContent strips spans, so re-wrap after each translation pass
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    if (el.innerHTML.includes('&amp;')) {
+      el.innerHTML = el.innerHTML.replace(/&amp;/g, '<span class="sw-amp">&amp;</span>');
+    }
+  });
 }
 
 // ── Auto-init on DOMContentLoaded ─────────────────────────────────────
