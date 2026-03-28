@@ -33,7 +33,7 @@ const TRANSLATIONS = {
     // ── HOME ─────────────────────────────────────────────────────────
     'home.hero.eyebrow': 'International Commercial Real Estate',
     'home.hero.headline': 'Where Capital Meets Opportunity',
-    'home.hero.subline': 'Discreet, expert guidance across Europe, Asia (Turkey) and UAE (Dubai) since 1989.',
+    'home.hero.subline': 'Discreet, expert guidance across Europe and Asia (Turkey) since 1989, and UAE (Dubai) since 2022.',
     'home.hero.cta.primary': 'View Our Services',
     'home.hero.cta.secondary': 'Contact Us',
 
@@ -126,7 +126,7 @@ const TRANSLATIONS = {
     // ── PROJECTS ──────────────────────────────────────────────────────
     'projects.hero.eyebrow': 'Portfolio',
     'projects.hero.headline': 'Selected Projects',
-    'projects.hero.subline': 'A curated selection from our 37-year portfolio of commercial real estate transactions across Europe, Asia (Turkey) and UAE (Dubai).',
+    'projects.hero.subline': 'A curated selection from our portfolio of commercial real estate transactions across Europe and Asia (Turkey) since 1989, and UAE (Dubai) since 2022.',
     'projects.filter.all': 'All',
     'projects.filter.development': 'Development',
     'projects.filter.land': 'Land',
@@ -329,7 +329,7 @@ const TRANSLATIONS = {
 
     'home.hero.eyebrow': 'Internationaal Commercieel Vastgoed',
     'home.hero.headline': 'Waar Kapitaal Kansen Ontmoet',
-    'home.hero.subline': 'Discrete, deskundige begeleiding in Europa, Azië (Turkije) en de VAE (Dubai) sinds 1989.',
+    'home.hero.subline': 'Discrete, deskundige begeleiding in Europa en Azië (Turkije) sinds 1989, en de VAE (Dubai) sinds 2022.',
     'home.hero.cta.primary': 'Onze Diensten',
     'home.hero.cta.secondary': 'Neem Contact Op',
 
@@ -415,7 +415,7 @@ const TRANSLATIONS = {
 
     'projects.hero.eyebrow': 'Portfolio',
     'projects.hero.headline': 'Geselecteerde Projecten',
-    'projects.hero.subline': 'Een selectie uit ons 37-jarig portfolio van vastgoedtransacties in Europa, Azië (Turkije) en de VAE (Dubai).',
+    'projects.hero.subline': 'Een selectie uit ons portfolio van vastgoedtransacties in Europa en Azië (Turkije) sinds 1989, en de VAE (Dubai) sinds 2022.',
     'projects.filter.all': 'Alle',
     'projects.filter.development': 'Ontwikkeling',
     'projects.filter.land': 'Grond',
@@ -612,7 +612,7 @@ const TRANSLATIONS = {
 
     'home.hero.eyebrow': 'Inmobiliaria Comercial Internacional',
     'home.hero.headline': 'Donde el Capital Encuentra la Oportunidad',
-    'home.hero.subline': 'Asesoramiento experto y discreto en Europa, Asia (Turquía) y EAU (Dubái) desde 1989.',
+    'home.hero.subline': 'Asesoramiento experto y discreto en Europa y Asia (Turquía) desde 1989, y EAU (Dubái) desde 2022.',
     'home.hero.cta.primary': 'Nuestros Servicios',
     'home.hero.cta.secondary': 'Contáctenos',
 
@@ -698,7 +698,7 @@ const TRANSLATIONS = {
 
     'projects.hero.eyebrow': 'Portfolio',
     'projects.hero.headline': 'Proyectos Seleccionados',
-    'projects.hero.subline': 'Una selección de nuestro portfolio de 37 años en transacciones inmobiliarias comerciales en Europa, Asia (Turquía) y EAU (Dubái).',
+    'projects.hero.subline': 'Una selección de nuestro portfolio de transacciones inmobiliarias en Europa y Asia (Turquía) desde 1989, y EAU (Dubái) desde 2022.',
     'projects.filter.all': 'Todos',
     'projects.filter.development': 'Desarrollo',
     'projects.filter.land': 'Terreno',
@@ -895,7 +895,7 @@ const TRANSLATIONS = {
 
     'home.hero.eyebrow': 'Uluslararası Ticari Gayrimenkul',
     'home.hero.headline': 'Sermayenin Fırsatla Buluştuğu Yer',
-    'home.hero.subline': '1989\'dan bu yana Avrupa, Asya (Türkiye) ve BAE (Dubai) pazarlarında uzman ve gizli rehberlik.',
+    'home.hero.subline': '1989\'dan bu yana Avrupa ve Asya (Türkiye), 2022\'den bu yana BAE (Dubai) pazarlarında uzman ve gizli rehberlik.',
     'home.hero.cta.primary': 'Hizmetlerimiz',
     'home.hero.cta.secondary': 'Bize Ulaşın',
 
@@ -981,7 +981,7 @@ const TRANSLATIONS = {
 
     'projects.hero.eyebrow': 'Portföy',
     'projects.hero.headline': 'Seçilmiş Projeler',
-    'projects.hero.subline': '37 yıllık Avrupa, Asya (Türkiye) ve BAE (Dubai) ticari gayrimenkul işlemleri portföyümüzden seçilmiş bir derleme.',
+    'projects.hero.subline': 'Avrupa ve Asya (Türkiye) 1989\'dan, BAE (Dubai) 2022\'den itibaren ticari gayrimenkul işlemleri portföyümüzden bir derleme.',
     'projects.filter.all': 'Tümü',
     'projects.filter.development': 'Geliştirme',
     'projects.filter.land': 'Arazi',
