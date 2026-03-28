@@ -248,7 +248,7 @@
       <div class="max-w-3xl">
         <!-- Company name — large display wordmark -->
         <h1 class="hero-name font-display text-white font-bold mb-2 hero-gradient-text" style="font-size:clamp(3.2rem,7vw,6rem);line-height:1.04;letter-spacing:-0.03em;">Smits <span style="font-family:'Inter',system-ui,sans-serif;font-weight:300;">&amp;</span> Wouters</h1>
-        <p id="hero-tagline" class="hero-name font-display-sc" style="font-size:1rem;letter-spacing:.06em;white-space:nowrap;color:rgba(255,255,255,.45);margin-bottom:1.75rem;">Vastgoed Investment Consultancy</p>
+        <p id="hero-tagline" class="hero-name font-display-sc" style="font-size:1.25rem;letter-spacing:.04em;color:rgba(255,255,255,.5);margin-bottom:1.75rem;text-align:justify;text-align-last:justify;">Vastgoed Investment Consultancy</p>
         <!-- Accent rule -->
         <div class="hero-rule flex items-center gap-3 mb-6">
           <div style="width:52px;height:1px;background:#5A8AE8;"></div>
@@ -599,14 +599,7 @@
       function fitTagline() {
         var target = h1TextWidth();
         if (!target) return;
-        var lo = 8, hi = 120, mid;
-        tag.style.fontSize = hi + 'px';
-        while (hi - lo > 0.5) {
-          mid = (lo + hi) / 2;
-          tag.style.fontSize = mid + 'px';
-          if (tag.scrollWidth <= target) lo = mid; else hi = mid;
-        }
-        tag.style.fontSize = lo + 'px';
+        tag.style.width = target + 'px';
       }
       fitTagline();
       window.addEventListener('resize', fitTagline);
