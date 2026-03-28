@@ -248,7 +248,7 @@
       <div class="max-w-3xl">
         <!-- Company name — large display wordmark -->
         <h1 class="hero-name font-display text-white font-bold mb-2 hero-gradient-text" style="font-size:clamp(3.2rem,7vw,6rem);line-height:1.04;letter-spacing:-0.03em;">Smits <span style="font-family:'Inter',system-ui,sans-serif;font-weight:300;">&amp;</span> Wouters</h1>
-        <p id="hero-tagline" class="hero-name font-display-sc" style="font-size:1.25rem;letter-spacing:.04em;color:rgba(255,255,255,.5);margin-bottom:1.75rem;text-align:justify;text-align-last:justify;">Vastgoed Investment Consultancy</p>
+        <p id="hero-tagline" class="hero-name font-display-sc" style="font-size:1rem;letter-spacing:.04em;color:rgba(255,255,255,.5);margin-bottom:1.75rem;white-space:nowrap;">Vastgoed Investment Consultancy</p>
         <!-- Accent rule -->
         <div class="hero-rule flex items-center gap-3 mb-6">
           <div style="width:52px;height:1px;background:#5A8AE8;"></div>
@@ -586,22 +586,23 @@
     (function() {
       var h1 = document.querySelector('h1');
       var tag = document.getElementById('hero-tagline');
-      function h1TextWidth() {
-        // Measure intrinsic text width by cloning h1 as inline-block off-screen
-        var clone = h1.cloneNode(true);
-        var orig = h1.getAttribute('style') || '';
-        clone.setAttribute('style', orig + ';position:absolute;left:-9999px;top:-9999px;display:inline-block;width:auto;white-space:nowrap;visibility:hidden;');
-        document.body.appendChild(clone);
-        var w = clone.getBoundingClientRect().width;
-        document.body.removeChild(clone);
-        return w;
+      function textWidth(el) {
+        var range = document.createRange();
+        range.selectNodeContents(el);
+        return range.getBoundingClientRect().width;
       }
       function fitTagline() {
-        var target = h1TextWidth();
+        var target = textWidth(h1);
         if (!target) return;
-        tag.style.width = target + 'px';
+        var lo = 8, hi = 150, mid;
+        while (hi - lo > 0.25) {
+          mid = (lo + hi) / 2;
+          tag.style.fontSize = mid + 'px';
+          if (textWidth(tag) <= target) lo = mid; else hi = mid;
+        }
+        tag.style.fontSize = lo + 'px';
       }
-      fitTagline();
+      document.fonts.ready.then(fitTagline);
       window.addEventListener('resize', fitTagline);
     })();
   </script>
