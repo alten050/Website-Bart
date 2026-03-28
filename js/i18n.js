@@ -162,7 +162,7 @@ const TRANSLATIONS = {
     'about.stat4': 'Referral-driven',
     'about.contact.cta': 'Get In Touch',
 
-    'about.office.eyebrow': 'Our Office',
+    'about.office.eyebrow': 'Head Office',
     'about.office.headline': 'Over 150 Years of History',
     'about.office.subline': 'The quiet foundation of an international practice.',
     'about.office.intro': 'Smits & Wouters is housed at one of Duiven\'s most historic addresses. Pastoriestraat 1 served as the Roman Catholic rectory of the Remigius parish for over a century — a building constructed in 1867 on a site whose history stretches back to the early Middle Ages. It represents continuity, trust, and an unassuming presence in the community: qualities that also define the way our firm operates.',
@@ -486,7 +486,7 @@ const TRANSLATIONS = {
     'about.stat4': 'Op aanbeveling',
     'about.contact.cta': 'Neem Contact Op',
 
-    'about.office.eyebrow': 'Ons Kantoor',
+    'about.office.eyebrow': 'Hoofdkantoor',
     'about.office.headline': 'Meer dan 150 jaar geschiedenis',
     'about.office.subline': 'De stille basis van een internationale praktijk.',
     'about.office.intro': 'Smits & Wouters is gevestigd op een van de meest historische adressen van Duiven. Pastoriestraat 1 was ruim een eeuw lang de rooms-katholieke pastorie van de Remigiusgemeente — een pand dat in 1867 werd gebouwd op een locatie waarvan de geschiedenis teruggaat tot de vroege middeleeuwen. Het staat voor continuïteit, vertrouwen en een onopvallende aanwezigheid in de gemeenschap: eigenschappen die ook de werkwijze van ons kantoor bepalen.',
@@ -805,7 +805,7 @@ const TRANSLATIONS = {
     'about.stat4': 'Por recomendación',
     'about.contact.cta': 'Póngase en Contacto',
 
-    'about.office.eyebrow': 'Nuestra Oficina',
+    'about.office.eyebrow': 'Sede Principal',
     'about.office.headline': 'Más de 150 años de historia',
     'about.office.subline': 'La base silenciosa de una práctica internacional.',
     'about.office.intro': 'Smits & Wouters está ubicado en una de las direcciones más históricas de Duiven. Pastoriestraat 1 fue durante más de un siglo la rectoría católica romana de la parroquia Remigius — un edificio construido en 1867 en un solar cuya historia se remonta a la Alta Edad Media. Representa continuidad, confianza y una presencia discreta en la comunidad: cualidades que también definen la forma de trabajar de nuestra firma.',
@@ -1124,7 +1124,7 @@ const TRANSLATIONS = {
     'about.stat4': 'Tavsiye ile',
     'about.contact.cta': 'İletişime Geçin',
 
-    'about.office.eyebrow': 'Ofisimiz',
+    'about.office.eyebrow': 'Merkez Ofis',
     'about.office.headline': '150 Yılı Aşkın Tarih',
     'about.office.subline': 'Uluslararası bir pratiğin sessiz temeli.',
     'about.office.intro': 'Smits & Wouters, Duiven\'in en tarihi adreslerinden birinde yer almaktadır. Pastoriestraat 1, yüz yılı aşkın süre Remigius cemaatinin Roma Katolik papaz evi olarak hizmet vermiş — tarihi ortaçağlara uzanan bir konumda 1867 yılında inşa edilmiş bir binadır. Süreklilik, güven ve toplumda gösterişsiz bir varlığı temsil eder: bunlar aynı zamanda büromuzun çalışma biçimini de belirleyen özelliklerdir.',
