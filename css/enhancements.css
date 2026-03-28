@@ -207,10 +207,12 @@ nav a.nav-active {
 
 /* ── Gradient text on hero headlines ────────────────────────── */
 .hero-gradient-text {
-  background: linear-gradient(110deg, #ffffff 30%, #d8eaff 100%);
+  background: linear-gradient(110deg, #ffffff 0%, #e8f4ff 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  color: white;
+  filter: drop-shadow(0 2px 16px rgba(10,22,40,0.55));
 }
 
 /* ── Ampersand override: clean sans-serif & in display font contexts ── */
