@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en" data-page="mandate">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/png" href="brand_asset/image001.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Register Your Investment Profile — Smits &amp; Wouters</title>
+  <meta name="description" content="Register your investment profile with Smits & Wouters. Tell us your criteria — asset type, region, size, and yield — and we match you against our off-market pipeline." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://smitsenwouters.com/profiel.html" />
+  <link rel="alternate" hreflang="en" href="https://smitsenwouters.com/profiel.html" />
+  <link rel="alternate" hreflang="nl" href="https://smitsenwouters.com/profiel.html" />
+  <link rel="alternate" hreflang="es" href="https://smitsenwouters.com/profiel.html" />
+  <link rel="alternate" hreflang="tr" href="https://smitsenwouters.com/profiel.html" />
+  <link rel="alternate" hreflang="x-default" href="https://smitsenwouters.com/profiel.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Smits &amp; Wouters" />
+  <meta property="og:title" content="Register Your Investment Profile — Smits &amp; Wouters" />
+  <meta property="og:description" content="Register your off-market investment profile. We match your criteria to our private deal pipeline across Europe, Turkey and UAE." />
+  <meta property="og:url" content="https://smitsenwouters.com/profiel.html" />
+  <meta property="og:image" content="https://smitsenwouters.com/brand_asset/image001.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Playfair+Display+SC:wght@400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <script src="js/tailwind-config.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/enhancements.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/bundled/lenis.min.js"></script>
+  <style>
+    /* ── profiel.html: page-specific ───────────────────────────── */
+    @keyframes kenBurns { from{transform:scale(1)} to{transform:scale(1.05)} }
+    .ken-burns { animation:kenBurns 16s ease-out both; }
+    .form-field {
+      width:100%; background:#F0F6FC; border:1px solid #C0D8F5;
+      padding:.75rem 1rem; font-family:'Inter',system-ui,sans-serif;
+      font-size:.875rem; color:#0F1E40; outline:none;
+      transition:border-color .2s ease, box-shadow .2s ease;
+    }
+    .form-field:focus { border-color:#162966; box-shadow:0 0 0 3px rgba(22,41,102,0.08); }
+    .form-field.error { border-color:#C0392B; }
+    .form-label {
+      display:block; font-family:'Playfair Display SC',Georgia,serif;
+      font-size:.68rem; letter-spacing:.12em; color:#4A6688; margin-bottom:.5rem;
+    }
+    .checkbox-group { display:grid; grid-template-columns:1fr 1fr; gap:.6rem .5rem; }
+    @media(max-width:480px){ .checkbox-group { grid-template-columns:1fr; } }
+    .check-item { display:flex; align-items:center; gap:.6rem; cursor:pointer; }
+    .check-item input[type=checkbox] { width:15px; height:15px; flex-shrink:0; accent-color:#162966; cursor:pointer; }
+    .check-item span { font-family:'Inter',system-ui,sans-serif; font-size:.8rem; color:#4A6688; }
+    select.form-field {
+      appearance:none;
+      background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%234A6688' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+      background-repeat:no-repeat; background-position:right 1rem center;
+      padding-right:2.5rem; cursor:pointer;
+    }
+    .mandate-cta-card {
+      background:linear-gradient(135deg,#0F1E40 0%,#162966 100%);
+      border:1px solid rgba(90,138,232,.2);
+    }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Register Your Investment Profile — Smits & Wouters",
+    "url": "https://smitsenwouters.com/profiel.html",
+    "description": "Register your investment profile with Smits & Wouters. Tell us your criteria — asset type, region, size, and yield — and we match you against our off-market pipeline.",
+    "isPartOf": { "@type": "WebSite", "url": "https://smitsenwouters.com/", "name": "Smits & Wouters" },
+    "publisher": { "@type": "RealEstateAgent", "name": "Smits & Wouters", "url": "https://smitsenwouters.com/" }
+  }
+  </script>
+</head>
+<body class="antialiased" style="background:#F0F6FC;">
+<div id="scroll-progress"></div>
+
+  <!-- HEADER -->
+  <header id="site-header" class="fixed top-0 left-0 right-0 z-50" style="background-color:rgba(10,22,40,0.82);backdrop-filter:blur(10px);">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <a href="index.html" class="btn flex flex-col leading-none gap-0.5">
+          <span class="font-display font-bold" style="font-size:1.3rem;letter-spacing:-0.02em;color:white;line-height:1;">Smits <span style="font-family:'Inter',system-ui,sans-serif;font-weight:700;">&amp;</span> Wouters</span>
+          <span class="font-display-sc" style="font-size:0.5rem;letter-spacing:.15em;color:rgba(255,255,255,.5);">Vastgoed Investment Consultancy</span>
+        </a>
+        <nav class="hidden md:flex items-center gap-8">
+          <a href="index.html" class="nav-link font-body text-sm font-medium text-white/60 pb-0.5" style="letter-spacing:.04em;"><span data-i18n="nav.home">Home</span></a>
+          <a href="services.html" class="nav-link font-body text-sm font-medium text-white/60 pb-0.5" style="letter-spacing:.04em;"><span data-i18n="nav.services">Services</span></a>
+          <a href="opportunities.html" class="nav-link font-body text-sm font-medium text-white/60 pb-0.5" style="letter-spacing:.04em;"><span data-i18n="nav.opportunities">Opportunities</span></a>
+          <a href="about.html" class="nav-link font-body text-sm font-medium text-white/60 pb-0.5" style="letter-spacing:.04em;"><span data-i18n="nav.about">About</span></a>
+          <a href="contact.html" class="nav-link font-body text-sm font-medium text-white/60 pb-0.5" style="letter-spacing:.04em;"><span data-i18n="nav.contact">Contact</span></a>
+        </nav>
+        <div class="flex items-center gap-4">
+          <div class="hidden md:flex items-center gap-1 pl-4" style="border-left:1px solid rgba(255,255,255,.15);">
+            <button data-lang="en" class="font-body text-xs font-medium text-white/50 px-1.5 py-1 btn" style="letter-spacing:.09em;">EN</button><span class="text-white/15 text-xs">|</span>
+            <button data-lang="nl" class="font-body text-xs font-medium text-white/50 px-1.5 py-1 btn" style="letter-spacing:.09em;">NL</button><span class="text-white/15 text-xs">|</span>
+            <button data-lang="es" class="font-body text-xs font-medium text-white/50 px-1.5 py-1 btn" style="letter-spacing:.09em;">ES</button><span class="text-white/15 text-xs">|</span>
+            <button data-lang="tr" class="font-body text-xs font-medium text-white/50 px-1.5 py-1 btn" style="letter-spacing:.09em;">TR</button>
+          </div>
+          <button id="hamburger" class="md:hidden p-2 btn" aria-label="Open menu" aria-expanded="false"><span class="bar"></span><span class="bar"></span><span class="bar"></span></button>
+        </div>
+      </div>
+    </div>
+</header>
+    <div id="mobile-menu" class="fixed inset-0 top-20 z-40 flex flex-col p-8 gap-6 md:hidden" style="background:rgba(8,16,34,0.97);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);">
+      <a href="index.html" class="font-display text-2xl text-white/70 border-b pb-4" style="border-color:rgba(255,255,255,.08);"><span data-i18n="nav.home">Home</span></a>
+      <a href="services.html" class="font-display text-2xl text-white/70 border-b pb-4" style="border-color:rgba(255,255,255,.08);"><span data-i18n="nav.services">Services</span></a>
+      <a href="opportunities.html" class="font-display text-2xl text-white/70 border-b pb-4" style="border-color:rgba(255,255,255,.08);"><span data-i18n="nav.opportunities">Opportunities</span></a>
+      <a href="about.html" class="font-display text-2xl text-white/70 border-b pb-4" style="border-color:rgba(255,255,255,.08);"><span data-i18n="nav.about">About</span></a>
+      <a href="contact.html" class="font-display text-2xl text-white/70 border-b pb-4" style="border-color:rgba(255,255,255,.08);"><span data-i18n="nav.contact">Contact</span></a>
+      <div class="flex items-center gap-3 pt-2 lang-row">
+        <button data-lang="en" class="font-body text-sm font-medium text-white/60 px-3 py-1.5 btn" style="border:1px solid rgba(255,255,255,.15);letter-spacing:.09em;">EN</button>
+        <button data-lang="nl" class="font-body text-sm font-medium text-white/60 px-3 py-1.5 btn" style="border:1px solid rgba(255,255,255,.15);letter-spacing:.09em;">NL</button>
+        <button data-lang="es" class="font-body text-sm font-medium text-white/60 px-3 py-1.5 btn" style="border:1px solid rgba(255,255,255,.15);letter-spacing:.09em;">ES</button>
+        <button data-lang="tr" class="font-body text-sm font-medium text-white/60 px-3 py-1.5 btn" style="border:1px solid rgba(255,255,255,.15);letter-spacing:.09em;">TR</button>
+      </div>
+    </div>
+  
+
+  <!-- HERO -->
+  <section class="relative flex items-end overflow-hidden hero-mouse-parallax" style="min-height:50vh;">
+    <div class="absolute inset-0">
+      <img src="brand_asset/best-luxury-properties-vastgoed-in-dubai-hills-estate-555845509.jpg" alt="" aria-hidden="true" class="ken-burns parallax-bg w-full h-full object-cover object-center" style="transform-origin:center 40%;" />
+      <div class="absolute inset-0" style="background:linear-gradient(105deg, rgba(10,22,40,0.95) 0%, rgba(10,22,40,0.75) 55%, rgba(10,22,40,0.45) 100%);"></div>
+      <div class="absolute inset-0" style="background:rgba(22,41,102,0.22);mix-blend-mode:multiply;"></div>
+    </div>
+    <div class="absolute inset-0 grain pointer-events-none" style="opacity:.4;"></div>
+    <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 pb-16 pt-36">
+      <p class="font-display-sc text-xs mb-4" style="color:#8FBAF5;letter-spacing:.16em;" data-i18n="mandate.hero.eyebrow">For Investors</p>
+      <h1 class="font-display text-white font-bold mb-4 hero-gradient-text" style="font-size:clamp(2.4rem,5vw,4rem);line-height:1.06;letter-spacing:-0.03em;" data-i18n="mandate.hero.headline">Register Your Profile</h1>
+      <div style="width:40px;height:1px;background:#5A8AE8;margin-bottom:1rem;"></div>
+      <p class="font-body text-lg" style="max-width:520px;line-height:1.68;color:rgba(255,255,255,.52);" data-i18n="mandate.hero.subline">Tell us what you are looking for. We match your criteria against our off-market pipeline — confidentially.</p>
+    </div>
+  </section>
+
+  <!-- MANDATE FORM -->
+  <section class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-5 gap-16">
+
+        <!-- LEFT: context -->
+        <div class="reveal-left lg:col-span-2">
+          <div class="mb-10 pb-10" style="border-bottom:1px solid #E4EEF9;">
+            <img src="brand_asset/huisje SW.jpg" alt="Smits & Wouters" class="h-20 w-auto" style="background:white;padding:4px 10px;border-radius:4px;" />
+          </div>
+          <p class="font-display-sc text-xs mb-3" style="color:#8FBAF5;letter-spacing:.14em;">Off-Market Network</p>
+          <p class="font-body text-sm mb-8" style="line-height:1.85;color:#4A6688;" data-i18n="mandate.form.intro">All information is treated with complete discretion. Profiles are reviewed personally by our principals.</p>
+
+          <!-- What we match on -->
+          <div class="flex flex-col gap-5 mb-10">
+            <div class="flex items-start gap-4">
+              <div style="width:32px;height:32px;background:#EEF4FB;border:1px solid #C0D8F5;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="#5A8AE8" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/></svg>
+              </div>
+              <div>
+                <p class="font-display-sc text-xs mb-1" style="color:#0F1E40;letter-spacing:.1em;">Geography</p>
+                <p class="font-body text-xs" style="color:#6B8CAD;line-height:1.6;">NL · ES · TR · UAE · Europe</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-4">
+              <div style="width:32px;height:32px;background:#EEF4FB;border:1px solid #C0D8F5;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="#5A8AE8" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21"/></svg>
+              </div>
+              <div>
+                <p class="font-display-sc text-xs mb-1" style="color:#0F1E40;letter-spacing:.1em;">Asset Types</p>
+                <p class="font-body text-xs" style="color:#6B8CAD;line-height:1.6;">Development · Land · Office · Retail · Logistics</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-4">
+              <div style="width:32px;height:32px;background:#EEF4FB;border:1px solid #C0D8F5;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="#5A8AE8" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33"/></svg>
+              </div>
+              <div>
+                <p class="font-display-sc text-xs mb-1" style="color:#0F1E40;letter-spacing:.1em;">Ticket Size</p>
+                <p class="font-body text-xs" style="color:#6B8CAD;line-height:1.6;">€1M – €100M+</p>
+              </div>
+            </div>
+          </div>
+
+          <div style="width:40px;height:2px;background:#5A8AE8;margin-bottom:1.5rem;"></div>
+          <p class="font-body text-xs" style="line-height:1.72;max-width:260px;color:#8FBAF5;">All profiles are treated confidentially and matched personally by our team.</p>
+        </div>
+
+        <!-- RIGHT: Form -->
+        <div class="reveal-right lg:col-span-3">
+          <div class="bg-brand-50 p-10 shadow-brand">
+
+            <!-- Success -->
+            <div id="mandate-success" class="hidden mb-8 p-4 flex items-center gap-3" style="background:#EBF5EF;border-left:3px solid #2E7D32;">
+              <svg class="w-5 h-5 flex-shrink-0" style="color:#2E7D32;" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              <p class="font-body text-sm" style="color:#1B5E20;" data-i18n="mandate.form.success">Thank you — your profile has been registered. We will be in touch confidentially.</p>
+            </div>
+
+            <form id="mandate-form" novalidate>
+              <!-- Honeypot -->
+              <div style="position:absolute;left:-9999px;top:-9999px;width:1px;height:1px;overflow:hidden;" aria-hidden="true" tabindex="-1">
+                <label for="mwebsite">Leave this empty</label>
+                <input type="text" id="mwebsite" name="website" autocomplete="off" tabindex="-1" />
+              </div>
+
+              <!-- Contact details -->
+              <div class="mb-8">
+                <p class="font-display-sc text-xs mb-5" style="color:#2D5FC4;letter-spacing:.14em;border-bottom:1px solid #E4EEF9;padding-bottom:.75rem;">Contact Details</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mb-5">
+                  <div>
+                    <label class="form-label" for="m-name" data-i18n="mandate.form.name.label">Full Name</label>
+                    <input type="text" id="m-name" name="name" class="form-field" placeholder="Your full name" data-i18n-placeholder="mandate.form.name.placeholder" required maxlength="100" />
+                  </div>
+                  <div>
+                    <label class="form-label" for="m-company" data-i18n="mandate.form.company.label">Organisation</label>
+                    <input type="text" id="m-company" name="company" class="form-field" placeholder="Company, family office, or fund" data-i18n-placeholder="mandate.form.company.placeholder" maxlength="150" />
+                  </div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                  <div>
+                    <label class="form-label" for="m-email" data-i18n="mandate.form.email.label">Email Address</label>
+                    <input type="email" id="m-email" name="email" class="form-field" placeholder="your@email.com" data-i18n-placeholder="mandate.form.email.placeholder" required maxlength="255" />
+                  </div>
+                  <div>
+                    <label class="form-label" for="m-phone" data-i18n="mandate.form.phone.label">Phone (optional)</label>
+                    <input type="tel" id="m-phone" name="phone" class="form-field" placeholder="+31 ..." data-i18n-placeholder="mandate.form.phone.placeholder" maxlength="30" />
+                  </div>
+                </div>
+              </div>
+
+              <!-- Investment profile -->
+              <div class="mb-8">
+                <p class="font-display-sc text-xs mb-5" style="color:#2D5FC4;letter-spacing:.14em;border-bottom:1px solid #E4EEF9;padding-bottom:.75rem;">Investment Profile</p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-5 mb-6">
+                  <div>
+                    <label class="form-label" for="m-size" data-i18n="mandate.form.size.label">Investment Size</label>
+                    <select id="m-size" name="investment_size" class="form-field" required>
+                      <option value="" data-i18n-opt="mandate.form.size.opt0">Select a range</option>
+                      <option value="1-5M" data-i18n-opt="mandate.form.size.opt1">€1M – €5M</option>
+                      <option value="5-25M" data-i18n-opt="mandate.form.size.opt2">€5M – €25M</option>
+                      <option value="25-100M" data-i18n-opt="mandate.form.size.opt3">€25M – €100M</option>
+                      <option value="100M+" data-i18n-opt="mandate.form.size.opt4">€100M+</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label class="form-label" for="m-yield" data-i18n="mandate.form.yield.label">Target Yield (gross)</label>
+                    <select id="m-yield" name="target_yield" class="form-field">
+                      <option value="" data-i18n-opt="mandate.form.yield.opt0">Select a target</option>
+                      <option value="4-6" data-i18n-opt="mandate.form.yield.opt1">4% – 6%</option>
+                      <option value="6-8" data-i18n-opt="mandate.form.yield.opt2">6% – 8%</option>
+                      <option value="8-10" data-i18n-opt="mandate.form.yield.opt3">8% – 10%</option>
+                      <option value="10+" data-i18n-opt="mandate.form.yield.opt4">10%+</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label class="form-label" for="m-horizon" data-i18n="mandate.form.horizon.label">Investment Horizon</label>
+                    <select id="m-horizon" name="horizon" class="form-field">
+                      <option value="" data-i18n-opt="mandate.form.horizon.opt0">Select a horizon</option>
+                      <option value="1-3y" data-i18n-opt="mandate.form.horizon.opt1">1 – 3 years</option>
+                      <option value="3-7y" data-i18n-opt="mandate.form.horizon.opt2">3 – 7 years</option>
+                      <option value="7y+" data-i18n-opt="mandate.form.horizon.opt3">7+ years</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="mb-6">
+                  <p class="form-label mb-3" data-i18n="mandate.form.type.label">Asset Types (select all that apply)</p>
+                  <div class="checkbox-group">
+                    <label class="check-item"><input type="checkbox" name="type_development" value="development" /><span data-i18n="mandate.form.type.development">Development</span></label>
+                    <label class="check-item"><input type="checkbox" name="type_land" value="land" /><span data-i18n="mandate.form.type.land">Land Positions</span></label>
+                    <label class="check-item"><input type="checkbox" name="type_office" value="office" /><span data-i18n="mandate.form.type.office">Office</span></label>
+                    <label class="check-item"><input type="checkbox" name="type_retail" value="retail" /><span data-i18n="mandate.form.type.retail">Retail / Hospitality</span></label>
+                    <label class="check-item"><input type="checkbox" name="type_mixed" value="mixed" /><span data-i18n="mandate.form.type.mixed">Mixed-Use</span></label>
+                    <label class="check-item"><input type="checkbox" name="type_logistics" value="logistics" /><span data-i18n="mandate.form.type.logistics">Industrial / Logistics</span></label>
+                  </div>
+                </div>
+
+                <div>
+                  <p class="form-label mb-3" data-i18n="mandate.form.regions.label">Preferred Regions</p>
+                  <div class="checkbox-group">
+                    <label class="check-item"><input type="checkbox" name="region_nl" value="netherlands" /><span data-i18n="mandate.form.regions.nl">Netherlands</span></label>
+                    <label class="check-item"><input type="checkbox" name="region_es" value="spain" /><span data-i18n="mandate.form.regions.es">Spain</span></label>
+                    <label class="check-item"><input type="checkbox" name="region_tr" value="turkey" /><span data-i18n="mandate.form.regions.tr">Turkey</span></label>
+                    <label class="check-item"><input type="checkbox" name="region_ae" value="uae" /><span data-i18n="mandate.form.regions.ae">UAE / Dubai</span></label>
+                    <label class="check-item"><input type="checkbox" name="region_eu" value="other_europe" /><span data-i18n="mandate.form.regions.eu">Other Europe</span></label>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Notes + off-market -->
+              <div class="mb-6">
+                <label class="form-label" for="m-notes" data-i18n="mandate.form.notes.label">Additional Notes (optional)</label>
+                <textarea id="m-notes" name="notes" rows="4" class="form-field resize-none" placeholder="Specific requirements, deal structures, excluded sectors, etc." data-i18n-placeholder="mandate.form.notes.placeholder" maxlength="1500"></textarea>
+              </div>
+
+              <!-- Off-market consent -->
+              <div class="flex items-start gap-3 mb-8">
+                <input type="checkbox" id="m-offmarket" name="offmarket_aligned" value="yes"
+                  style="margin-top:3px;width:15px;height:15px;flex-shrink:0;accent-color:#162966;cursor:pointer;" />
+                <label for="m-offmarket" class="font-body text-xs" style="line-height:1.65;color:#4A6688;cursor:pointer;" data-i18n="mandate.form.offmarket.label">We focus exclusively on off-market transactions. Is that aligned with your profile?</label>
+              </div>
+
+              <!-- Privacy -->
+              <div class="flex items-start gap-3 mb-8">
+                <input type="checkbox" id="m-privacy" name="privacy" required
+                  style="margin-top:3px;width:15px;height:15px;flex-shrink:0;accent-color:#162966;cursor:pointer;" />
+                <label for="m-privacy" class="font-body text-xs" style="line-height:1.65;color:#4A6688;cursor:pointer;">
+                  <span data-i18n="contact.form.privacy.prefix">I have read and agree to the </span><a href="privacy.html" target="_blank" style="color:#162966;text-decoration:underline;text-underline-offset:3px;" data-i18n="contact.form.privacy.link">Privacy Statement</a><span data-i18n="contact.form.privacy.suffix"> of Smits &amp; Wouters.</span>
+                </label>
+              </div>
+
+              <button type="submit" class="btn inline-flex items-center gap-2 px-10 py-4 font-body text-sm font-semibold text-white" style="background:#162966;letter-spacing:.06em;border:none;cursor:pointer;">
+                <span data-i18n="mandate.form.submit">Submit Profile</span>
+                <svg width="15" height="15" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+              </button>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer style="background:#0A1628;" class="pt-16 pb-8">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12 pb-12" style="border-bottom:1px solid rgba(255,255,255,.06);">
+        <div>
+          <img src="brand_asset/huisje SW.jpg" alt="Smits & Wouters" class="h-16 w-auto mb-4" style="background:white;padding:4px 10px;border-radius:4px;" />
+          <p class="font-body text-sm" style="line-height:1.65;color:rgba(255,255,255,.35);" data-i18n="footer.tagline">International commercial real estate — discreet, expert, results-driven.</p>
+        </div>
+        <div>
+          <p class="font-display-sc text-xs mb-4" style="color:#5A8AE8;letter-spacing:.14em;">Navigation</p>
+          <nav class="flex flex-col gap-2.5">
+            <a href="index.html" class="font-body text-sm" style="color:rgba(255,255,255,.45);transition:color .2s ease;" onmouseover="this.style.color='rgba(255,255,255,.85)'" onmouseout="this.style.color='rgba(255,255,255,.45)'" data-i18n="nav.home">Home</a>
+            <a href="services.html" class="font-body text-sm" style="color:rgba(255,255,255,.45);transition:color .2s ease;" onmouseover="this.style.color='rgba(255,255,255,.85)'" onmouseout="this.style.color='rgba(255,255,255,.45)'" data-i18n="nav.services">Services</a>
+            <a href="opportunities.html" class="font-body text-sm" style="color:rgba(255,255,255,.45);transition:color .2s ease;" onmouseover="this.style.color='rgba(255,255,255,.85)'" onmouseout="this.style.color='rgba(255,255,255,.45)'" data-i18n="nav.opportunities">Opportunities</a>
+            <a href="about.html" class="font-body text-sm" style="color:rgba(255,255,255,.45);transition:color .2s ease;" onmouseover="this.style.color='rgba(255,255,255,.85)'" onmouseout="this.style.color='rgba(255,255,255,.45)'" data-i18n="nav.about">About</a>
+            <a href="contact.html" class="font-body text-sm" style="color:rgba(255,255,255,.45);transition:color .2s ease;" onmouseover="this.style.color='rgba(255,255,255,.85)'" onmouseout="this.style.color='rgba(255,255,255,.45)'" data-i18n="nav.contact">Contact</a>
+          </nav>
+        </div>
+        <div>
+          <p class="font-display-sc text-xs mb-4" style="color:#5A8AE8;letter-spacing:.14em;" data-i18n="footer.established">Established 1989</p>
+          <address class="not-italic">
+            <p class="font-body text-xs mb-1" style="color:rgba(255,255,255,.22);letter-spacing:.06em;text-transform:uppercase;">Hoofdkantoor</p>
+            <p class="font-body text-sm mb-1.5" style="color:rgba(255,255,255,.45);" data-i18n="footer.address">Pastoriestraat 1, 6921BV Duiven, The Netherlands</p>
+            <a href="tel:+31650698090" class="font-body text-sm" style="color:rgba(255,255,255,.45);transition:color .2s ease;" onmouseover="this.style.color='#8FBAF5'" onmouseout="this.style.color='rgba(255,255,255,.45)'" data-i18n="footer.phone">+31(0)6 50698090</a>
+          </address>
+        </div>
+      </div>
+      <div class="flex flex-col md:flex-row justify-between items-center gap-3">
+        <p class="font-body text-xs" style="color:rgba(255,255,255,.2);" data-i18n="footer.copyright">© 1989–2026 Smits &amp; Wouters. All rights reserved.</p>
+        <a href="privacy.html" class="font-body text-xs" style="color:rgba(255,255,255,.25);transition:color .2s ease;" onmouseover="this.style.color='rgba(255,255,255,.55)'" onmouseout="this.style.color='rgba(255,255,255,.25)'" data-i18n="footer.privacy">Privacy Statement</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/i18n.js" defer></script>
+  <script>
+    const header = document.getElementById('site-header');
+    window.addEventListener('scroll', () => { header.classList.toggle('scrolled', window.scrollY > 40); }, { passive: true });
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobile-menu');
+    let menuOpen = false;
+    hamburger.addEventListener('click', () => {
+      menuOpen = !menuOpen;
+      hamburger.classList.toggle('is-open', menuOpen);
+      mobileMenu.classList.toggle('is-open', menuOpen);
+      hamburger.setAttribute('aria-expanded', menuOpen);
+    });
+
+    // Mandate form submission
+    const MANDATE_ENDPOINT = 'https://formspree.io/f/YOUR_MANDATE_FORM_ID';
+    const mandateForm = document.getElementById('mandate-form');
+    const mandateSuccess = document.getElementById('mandate-success');
+
+    mandateForm.addEventListener('submit', async function(e) {
+      e.preventDefault();
+      if (mandateForm.querySelector('#mwebsite').value) return;
+
+      const btn = mandateForm.querySelector('button[type=submit]');
+      btn.disabled = true;
+      btn.style.opacity = '.6';
+
+      try {
+        const resp = await fetch(MANDATE_ENDPOINT, {
+          method: 'POST',
+          headers: { 'Accept': 'application/json' },
+          body: new FormData(mandateForm),
+        });
+        if (resp.ok) {
+          mandateForm.style.display = 'none';
+          mandateSuccess.classList.remove('hidden');
+          mandateSuccess.style.display = 'flex';
+        } else {
+          throw new Error('Server error');
+        }
+      } catch {
+        alert('Something went wrong. Please call us directly at +31(0)6 50698090.');
+        btn.disabled = false;
+        btn.style.opacity = '1';
+      }
+    });
+  </script>
+  <script src="js/animations.js" defer></script>
+</body>
+</html>
