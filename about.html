@@ -124,14 +124,29 @@
     </div>
   </header>
 
-  <!-- HERO — office photo -->
-  <section class="relative flex items-end overflow-hidden hero-mouse-parallax" style="min-height:60vh;">
-    <div class="absolute inset-0">
-      <img src="brand_asset/kantoor.png" alt="Smits &amp; Wouters — Pastoriestraat 1, Duiven" class="ken-burns w-full h-full object-cover object-center" style="transform-origin:center 40%;" />
-      <div class="absolute inset-0" style="background:linear-gradient(to top, rgba(10,22,40,0.92) 0%, rgba(10,22,40,0.65) 50%, rgba(10,22,40,0.30) 100%);"></div>
-      <div class="absolute inset-0" style="background:rgba(22,41,102,0.18);mix-blend-mode:multiply;"></div>
+  <!-- HERO — blueprint illustration -->
+  <section class="relative flex items-end overflow-hidden" style="min-height:60vh;background:#080E1C;">
+
+    <!-- Blueprint grid -->
+    <div class="absolute inset-0 pointer-events-none" style="background-image:linear-gradient(rgba(90,138,232,.055) 1px,transparent 1px),linear-gradient(90deg,rgba(90,138,232,.055) 1px,transparent 1px);background-size:52px 52px;"></div>
+
+    <!-- Building illustration — right-anchored, large -->
+    <div class="absolute inset-0 pointer-events-none flex items-center" style="justify-content:flex-end;padding-right:clamp(1rem,6vw,7rem);padding-top:5rem;">
+      <img src="brand_asset/huisje SW.jpg" alt="" aria-hidden="true"
+        class="ken-burns"
+        style="height:min(480px,72vh);width:auto;filter:invert(1);mix-blend-mode:screen;opacity:.28;transform-origin:center center;" />
     </div>
-    <div class="absolute inset-0 grain pointer-events-none" style="opacity:.35;"></div>
+
+    <!-- Glow behind illustration -->
+    <div class="absolute inset-0 pointer-events-none" style="background:radial-gradient(ellipse 55% 60% at 78% 52%, rgba(22,41,102,0.55) 0%, transparent 70%);"></div>
+
+    <!-- Left-to-right gradient — makes text readable -->
+    <div class="absolute inset-0 pointer-events-none" style="background:linear-gradient(to right, rgba(8,14,28,0.97) 0%, rgba(8,14,28,0.82) 45%, rgba(8,14,28,0.08) 100%);"></div>
+
+    <!-- Bottom gradient -->
+    <div class="absolute inset-0 pointer-events-none" style="background:linear-gradient(to top, rgba(8,14,28,0.90) 0%, transparent 45%);"></div>
+
+    <div class="absolute inset-0 grain pointer-events-none" style="opacity:.28;"></div>
     <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 pb-16 pt-40 w-full">
       <div class="max-w-2xl">
         <p class="hero-sub font-display-sc text-xs mb-4" style="color:#8FBAF5;letter-spacing:.18em;" data-i18n="about.hero.eyebrow">The Firm</p>
