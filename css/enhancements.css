@@ -207,7 +207,7 @@ nav a.nav-active {
 
 /* ── Gradient text on hero headlines ────────────────────────── */
 .hero-gradient-text {
-  background: linear-gradient(110deg, #ffffff 45%, #8FBAF5 100%);
+  background: linear-gradient(110deg, #ffffff 30%, #d8eaff 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
