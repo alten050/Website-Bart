@@ -1,3 +1,19 @@
+/* Override decorative & in Playfair Display with clean system sans-serif */
+@font-face {
+  font-family: 'Playfair Display';
+  src: local('Inter'), local('Helvetica Neue'), local('Arial');
+  unicode-range: U+0026;
+  font-weight: 100 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Playfair Display';
+  src: local('Inter'), local('Helvetica Neue'), local('Arial');
+  unicode-range: U+0026;
+  font-weight: 100 900;
+  font-style: italic;
+}
+
 /* ═══════════════════════════════════════════════════════════════
    Smits & Wouters — Shared Styles
    Everything in this file is loaded on every page.
@@ -245,6 +261,7 @@ nav a.nav-active {
 
 /* ── Mobile menu: opacity-based visibility ──────────────────── */
 #mobile-menu {
+  z-index: 100;
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.28s ease;
