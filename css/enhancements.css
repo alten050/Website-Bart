@@ -222,18 +222,17 @@ nav a.nav-active {
 /* ── Hamburger → ✕ morph ────────────────────────────────────── */
 #hamburger {
   position: relative;
-  width: 32px;
-  height: 22px;
+  width: 28px;
+  height: 20px;
   flex-shrink: 0;
   padding: 0 !important;
   display: flex !important;
   align-items: center;
   justify-content: center;
   gap: 0 !important;
-  background: rgba(255,255,255,0.12);
+  border: 1.5px solid rgba(255,255,255,0.45) !important;
   border-radius: 5px;
-  box-sizing: content-box;
-  padding: 8px !important;
+  padding: 6px 8px !important;
 }
 
 #hamburger .bar {
