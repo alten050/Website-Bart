@@ -337,9 +337,9 @@ const TRANSLATIONS = {
     'opp.deals.headline': 'Current Deal Teasers',
     'opp.deals.body': 'All deals are presented anonymously. Location, counterparty, and pricing details are shared exclusively with qualified, introduced parties.',
     'opp.mandate.eyebrow': 'Stay Informed',
-    'opp.mandate.headline': 'Register Your Investment Profile',
+    'opp.mandate.headline': 'Register Your Investment Assignment',
     'opp.mandate.body': 'Tell us precisely what you are looking for. We will contact you personally when a matching opportunity enters our pipeline.',
-    'opp.mandate.cta': 'Register Profile',
+    'opp.mandate.cta': 'Register Assignment',
   },
 
   // ── DUTCH ──────────────────────────────────────────────────────────
@@ -660,9 +660,9 @@ const TRANSLATIONS = {
     'opp.deals.headline': 'Actuele Deal Teasers',
     'opp.deals.body': 'Alle deals worden anoniem gepresenteerd. Locatie, tegenpartij en prijsdetails worden uitsluitend gedeeld met gekwalificeerde, geïntroduceerde partijen.',
     'opp.mandate.eyebrow': 'Op de Hoogte Blijven',
-    'opp.mandate.headline': 'Registreer Uw Beleggingsprofiel',
+    'opp.mandate.headline': 'Registreer uw beleggingsopdracht',
     'opp.mandate.body': 'Vertel ons precies wat u zoekt. Wij nemen persoonlijk contact op zodra een passende kans onze pipeline instroomt.',
-    'opp.mandate.cta': 'Profiel Registreren',
+    'opp.mandate.cta': 'Opdracht registreren',
   },
 
   // ── SPANISH ────────────────────────────────────────────────────────
@@ -979,9 +979,9 @@ const TRANSLATIONS = {
     'opp.deals.headline': 'Deal Teasers Actuales',
     'opp.deals.body': 'Todas las operaciones se presentan de forma anónima. Los detalles de ubicación, contraparte y precio se comparten exclusivamente con partes cualificadas e introducidas.',
     'opp.mandate.eyebrow': 'Manténgase Informado',
-    'opp.mandate.headline': 'Registre Su Perfil de Inversión',
+    'opp.mandate.headline': 'Registre Su Encargo de Inversión',
     'opp.mandate.body': 'Díganos exactamente qué busca. Le contactaremos personalmente cuando una oportunidad coincidente entre en nuestra cartera.',
-    'opp.mandate.cta': 'Registrar Perfil',
+    'opp.mandate.cta': 'Registrar Encargo',
   },
 
   // ── TURKISH ────────────────────────────────────────────────────────
@@ -1298,9 +1298,9 @@ const TRANSLATIONS = {
     'opp.deals.headline': 'Güncel Deal Teaserlar',
     'opp.deals.body': 'Tüm işlemler anonim olarak sunulur. Konum, karşı taraf ve fiyatlandırma detayları yalnızca nitelikli, tanıtılmış taraflarla paylaşılır.',
     'opp.mandate.eyebrow': 'Haberdar Olun',
-    'opp.mandate.headline': 'Yatırım Profilinizi Kaydedin',
+    'opp.mandate.headline': 'Yatırım Görevinizi Kaydedin',
     'opp.mandate.body': 'Tam olarak ne aradığınızı bize söyleyin. Portföyümüze eşleşen bir fırsat girdiğinde sizinle kişisel olarak iletişime geçeceğiz.',
-    'opp.mandate.cta': 'Profili Kaydet',
+    'opp.mandate.cta': 'Görevi Kaydet',
   },
 };
 
