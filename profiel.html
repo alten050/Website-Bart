@@ -375,26 +375,11 @@
       btn.disabled = true;
       btn.style.opacity = '.6';
 
-      // Collect checkboxes as readable text
-      const assetTypes = ['type_development','type_land','type_office','type_retail','type_mixed','type_logistics'];
-      const assetLabels = { type_development:'Ontwikkeling', type_land:'Grondposities', type_office:'Kantoor', type_retail:'Retail/Horeca', type_mixed:'Gemengd Gebruik', type_logistics:'Industrieel/Logistiek' };
-      const selectedAssets = assetTypes.filter(n => mandateForm.querySelector('[name="'+n+'"]').checked).map(n => assetLabels[n]);
-
-      const regions = ['region_nl','region_es','region_tr','region_ae','region_eu'];
-      const regionLabels = { region_nl:'Nederland', region_es:'Spanje', region_tr:'Turkije', region_ae:'VAE/Dubai', region_eu:'Overig Europa' };
-      const selectedRegions = regions.filter(n => mandateForm.querySelector('[name="'+n+'"]').checked).map(n => regionLabels[n]);
-
-      const data = new FormData(mandateForm);
-      data.set('vastgoedtypen', selectedAssets.length ? selectedAssets.join(', ') : 'Geen geselecteerd');
-      data.set('regio', selectedRegions.length ? selectedRegions.join(', ') : 'Geen geselecteerd');
-      // Remove individual checkbox fields
-      assetTypes.concat(regions).forEach(n => data.delete(n));
-
       try {
         const resp = await fetch(MANDATE_ENDPOINT, {
           method: 'POST',
           headers: { 'Accept': 'application/json' },
-          body: data,
+          body: new FormData(mandateForm),
         });
         if (resp.ok) {
           mandateForm.style.display = 'none';
