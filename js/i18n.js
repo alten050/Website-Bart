@@ -1090,6 +1090,10 @@ const TRANSLATIONS = {
     'opp.mandate.headline': 'Registre Su Encargo de Inversión',
     'opp.mandate.body': 'Díganos exactamente qué busca. Le contactaremos personalmente cuando una oportunidad coincidente entre en nuestra cartera.',
     'opp.mandate.cta': 'Registrar Encargo',
+    'footer.privacy': 'Declaración de Privacidad',
+    'contact.form.privacy.prefix': 'He leído y acepto la ',
+    'contact.form.privacy.link': 'Declaración de Privacidad',
+    'contact.form.privacy.suffix': ' de Smits & Wouters.',
   },
 
   // ── TURKISH ────────────────────────────────────────────────────────
@@ -1445,6 +1449,10 @@ const TRANSLATIONS = {
     'opp.mandate.headline': 'Yatırım Görevinizi Kaydedin',
     'opp.mandate.body': 'Tam olarak ne aradığınızı bize söyleyin. Portföyümüze eşleşen bir fırsat girdiğinde sizinle kişisel olarak iletişime geçeceğiz.',
     'opp.mandate.cta': 'Görevi Kaydet',
+    'footer.privacy': 'Gizlilik Bildirimi',
+    'contact.form.privacy.prefix': 'Okudum ve kabul ediyorum ',
+    'contact.form.privacy.link': 'Gizlilik Bildirimi',
+    'contact.form.privacy.suffix': " Smits & Wouters'ın.",
   },
 };
 
